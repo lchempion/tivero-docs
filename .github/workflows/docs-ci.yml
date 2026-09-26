@@ -37,6 +37,9 @@ jobs:
       - name: Content hygiene
         run: npm run check:content
 
+      - name: Publish surface
+        run: npm run check:publish
+
       - name: Mintlify validate
         run: npm run validate
 
