@@ -1,0 +1,65 @@
+---
+title: "Import people from a file"
+description: "Import a list of people from a CSV or XLSX file, match the columns and review the preview before importing."
+---
+
+**Who:** HR, Administrator, Owner.
+**Prerequisites:** a CSV or XLSX file whose first row contains column headers.
+
+## Prepare the file
+
+Each row is one person. Three columns are required: first name, last name and email address. The rest are optional.
+
+| Tivero field | Required | Notes |
+|---|---|---|
+| **First name** | yes | |
+| **Last name** | yes | |
+| **Email** | yes | The account key — you can't change it later. |
+| **Collaboration form** | no | For example employment contract or B2B. |
+| **Start date** | no | |
+| **Profile country** | no | Profile data. It does **not** change the holiday calendar — that comes from the person's work location. |
+| **Language** | no | |
+| **Team (name)** | no | The name of a team in Tivero. |
+| **Leave balance (days)** | no | The opening balance in days. |
+
+## Import people
+
+<Steps>
+  <Step title="Open the import">
+    Go to **People** and click **Import**.
+  </Step>
+  <Step title="File">
+    Click **Choose a file…** and select a CSV or XLSX file.
+  </Step>
+  <Step title="Mapping">
+    Match the file's columns to Tivero fields. Set columns you don't want to import to **— skip —**. Starred fields are required.
+  </Step>
+  <Step title="Preview">
+    Check how many rows are valid and invalid. Rows with errors are skipped during import.
+  </Step>
+  <Step title="Done">
+    You see how many people were created and how many were skipped.
+  </Step>
+</Steps>
+
+## After the import
+
+Imported people have the **Imported** status. Tivero doesn't send them invitations automatically. When they're ready, open the person on the **People** list and click **Send invitation**.
+
+Also check that people have a policy and a supervisor. Banners on the **People** list show who is missing a balance or an approver.
+
+<Tip>
+  If your organization uses Microsoft 365, you can [sync people from Microsoft Entra ID](/en/microsoft-365/directory-sync) instead of using a file.
+</Tip>
+
+## If something doesn't work
+
+- **"Could not read the file"** — check that the file is CSV or XLSX and that the first row contains headers.
+- **"The file is too large"** — split the file into smaller parts.
+- Rows skipped in the preview — fix them in the file and import just those rows again.
+
+## Related articles
+
+- [Add and invite people](/en/people/add-and-invite-people)
+- [Teams and supervisors](/en/people/teams-and-supervisors)
+- [Balances](/en/time-off/balances)

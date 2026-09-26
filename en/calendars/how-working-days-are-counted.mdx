@@ -1,0 +1,49 @@
+---
+title: "How working days are counted"
+description: "What Tivero uses to work out a request's length: the work schedule, the confirmed holiday calendar, company days and statutory transfers."
+---
+
+An absence request is counted in working days, not calendar days. Tivero works out a person's working days from several settings your organization configures.
+
+## What makes up a person's working-day calendar
+
+| Part | What it does | Where you set it |
+|---|---|---|
+| **Work schedule** | Decides which weekdays are working days (for example Monday–Friday). | [Work schedules](/en/calendars/work-schedules) |
+| **Work location** | Decides which holiday calendar applies to the person. | [Work locations](/en/calendars/work-locations) |
+| **Confirmed holiday calendar** | Removes holidays from the count. Includes your corrections: holidays treated as normal days and moved holidays. | [Holiday calendar](/en/calendars/holiday-calendar) |
+| **Company days** | Additional company days off and company working days. | [Company days](/en/calendars/company-days) |
+| **Statutory transfers** | Statutory working-day transfers, if the organization applies them. | [Work schedules](/en/calendars/work-schedules) |
+
+<Warning>
+  Tivero counts requests **only from a holiday calendar your organization has confirmed**. If the calendar for a work location and year isn't confirmed, requests for that period are blocked with "The holiday calendar needs to be set up by an administrator.". This is a deliberate safeguard: Tivero doesn't guess which days are off for you.
+</Warning>
+
+## Who decides the holidays
+
+Tivero suggests holidays from its calendar provider as a **reference calendar**. Your organization decides which days are off: it reviews the suggestion, corrects it and confirms it. Only the confirmed calendar is used to count requests.
+
+Tivero doesn't guarantee that the suggestion is legally correct in every country. In some countries, whether a holiday is a day off depends on contracts or collective agreements. Check each date before you confirm.
+
+## Check how a specific request was calculated
+
+On the request, click **How was … calculated?**. You see every day in the range and the reason:
+
+| Reason | Counts towards the request? |
+|---|---|
+| **Weekend** | no |
+| **Public holiday** | no |
+| **Additional company day off** | no |
+| **Rest day in the work schedule** | no |
+| **Statutory rest day** | no |
+| **Statutory working day** | yes |
+| **Company working day** | yes |
+
+## Changing settings
+
+Changes to the schedule, work location or calendar apply from a chosen date. They don't recalculate requests that were already submitted.
+
+## Related articles
+
+- [Request an absence](/en/time-off/request-absence)
+- [Holiday calendar needs setup](/en/troubleshooting/holiday-calendar-needs-setup)

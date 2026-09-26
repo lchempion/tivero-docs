@@ -1,0 +1,8 @@
+{
+  "$comment": "The ONE list of active documentation languages. Codes must be Mintlify navigation.languages codes. `reference` is the locale whose structure the others are checked against. Adding a language = add an entry here, add its labels to i18n/navigation.json and i18n/chrome.json, translate every page into <code>/, then run `npm run build:nav`.",
+  "reference": "pl",
+  "locales": [
+    { "code": "pl", "name": "Polski", "appLocale": "pl", "siteLocale": "pl" },
+    { "code": "en", "name": "English", "appLocale": "en", "siteLocale": "en" }
+  ]
+}

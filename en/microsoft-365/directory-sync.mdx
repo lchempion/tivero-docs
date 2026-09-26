@@ -1,0 +1,56 @@
+---
+title: "Sync people from Entra ID"
+description: "Import and update people in Tivero from the Microsoft Entra ID directory, with a preview of changes before anything is saved."
+---
+
+**Who:** Administrator or Owner.
+**Prerequisites:** a [connected Microsoft 365 integration](/en/microsoft-365/connect) and the Growth or Enterprise plan (or the trial).
+**Where:** **Integrations → Microsoft 365 → People — Microsoft Entra ID**.
+
+## First sync
+
+<Steps>
+  <Step title="Prepare a preview">
+    Click **Preview changes**. Tivero compares the directory with the people in Tivero. Nothing is saved yet.
+  </Step>
+  <Step title="Review the change plan">
+    The preview groups people into **New people**, **To update**, **Deactivation candidates**, **Conflicts** and **No change**.
+  </Step>
+  <Step title="Apply">
+    Click **Apply** to save the changes.
+  </Step>
+</Steps>
+
+**Result:** new people appear on the **People** list with the **Imported** status. Tivero **doesn't send** them invitations automatically — invite them when they're ready. See [Add and invite people](/en/people/add-and-invite-people).
+
+Later, you can run a sync manually with **Sync now**.
+
+## What data is synced
+
+Email address, first name, last name, display name, job title, department, account status and — if you turn on manager sync — the supervisor. Tivero only reads the directory; it never changes anything in it.
+
+## Sync settings
+
+| Setting | What it does |
+|---|---|
+| **Automatic synchronization** | Daily import and field updates. Deactivation candidates still require manual confirmation. |
+| **Manager synchronization** | Sets the supervisor from the directory, which feeds the [approval route](/en/time-off/approval-process). Never clears an existing supervisor. |
+| **Automatic offboarding** | Deactivates people who have gone from the directory or have been disabled for longer than a set number of days. **Off by default.** |
+
+## Deactivation candidates
+
+People who have gone from the directory or whose account is disabled end up in **Deactivation candidates**. They are not deactivated automatically — HR deactivates them manually on the **People** list, unless you turn on automatic offboarding.
+
+<Warning>
+  Automatic offboarding deactivates people without a human in the loop. Turn it on only when import and matching work correctly on your data. Tivero requires several consecutive complete syncs on the same scope before it lets you turn it on. It also has a circuit breaker: on a sudden spike of candidates it deactivates nobody and pauses until you decide.
+</Warning>
+
+## Conflicts
+
+A conflict means Tivero can't unambiguously match a person in the directory to a person in Tivero. Resolve the conflict in Tivero or in the directory and run the sync again.
+
+## Related articles
+
+- [Outlook calendar](/en/microsoft-365/outlook-calendar)
+- [Manage access](/en/people/manage-access)
+- [Microsoft 365 issues](/en/troubleshooting/microsoft-365-issues)

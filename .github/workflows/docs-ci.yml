@@ -1,0 +1,47 @@
+name: docs-ci
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install (pinned Mintlify CLI)
+        run: npm ci
+
+      - name: Navigation is generated from i18n/
+        run: npm run check:nav
+
+      - name: Locale parity
+        run: npm run check:locales
+
+      - name: Content hygiene
+        run: npm run check:content
+
+      - name: Mintlify validate
+        run: npm run validate
+
+      - name: Internal broken links
+        run: npm run links
+
+      - name: Accessibility (contrast and alt text)
+        run: npm run a11y

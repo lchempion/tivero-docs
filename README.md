@@ -1,55 +1,52 @@
-# Mintlify Starter Kit
+# Tivero Help Center
 
-Use the starter kit to get your docs deployed and ready to customize.
+Customer documentation for [Tivero](https://tivero.app), published at
+**https://help.tivero.app**. Built with [Mintlify](https://mintlify.com).
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+Tivero is a multi-tenant SaaS for absences, planned unavailability, approvals and
+working-day calendars. The documentation covers only what the product does today.
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+## Structure
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+```
+docs.json               Mintlify configuration (navigation is generated)
+i18n/locales.json       active locales — the single list of languages
+i18n/navigation.json    logical articles, groups and per-locale group labels
+i18n/chrome.json        per-locale navbar and footer text
+pl/<group>/<slug>.mdx   Polish pages (reference locale)
+en/<group>/<slug>.mdx   English pages (same slugs)
+scripts/                navigation generator and CI checks
+```
 
-## AI-assisted writing
+Each article has one logical id (`<group>/<slug>`) shared by all locales, so
+`/pl/time-off/balances` and `/en/time-off/balances` are the same article.
 
-Set up your AI coding tool to work with Mintlify:
+## Local development
+
+Requires Node.js 20 or newer.
 
 ```bash
-npx skills add https://mintlify.com/docs
+npm ci
+npm run dev        # preview at http://localhost:3000
+npm run check      # run every gate CI runs
 ```
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+After changing `i18n/*.json`, run `npm run build:nav` and commit the updated
+`docs.json`.
 
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+## Adding a language
 
-## Development
+See "Adding a locale" in [AGENTS.md](AGENTS.md). In short: register it in
+`i18n/locales.json`, add labels in `i18n/navigation.json` and `i18n/chrome.json`,
+translate every page, then run `npm run build:nav && npm run check`. No code
+changes are needed.
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+## Publishing
 
-```
-npm i -g mint
-```
+Changes reach help.tivero.app only through a reviewed pull request merged into
+the default branch, with green CI. Nothing is published manually from this
+repository.
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+## Contact
 
-```
-mint dev
-```
-
-View your local preview at `http://localhost:3000`.
-
-## Publishing changes
-
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+hello@tivero.app

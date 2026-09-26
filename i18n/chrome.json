@@ -1,0 +1,25 @@
+{
+  "$comment": "Per-locale site chrome. {app} and {site} are replaced with the locale's appLocale/siteLocale from locales.json, so a language without its own app or site locale can point at an existing one.",
+  "pl": {
+    "signIn": "Zaloguj się",
+    "contact": "Kontakt",
+    "footerHeader": "Tivero",
+    "footerLinks": [
+      { "label": "Strona Tivero", "href": "https://tivero.app/{site}" },
+      { "label": "Polityka prywatności", "href": "https://tivero.app/{site}/privacy" },
+      { "label": "Regulamin", "href": "https://tivero.app/{site}/terms" },
+      { "label": "Pliki cookie", "href": "https://tivero.app/{site}/cookies" }
+    ]
+  },
+  "en": {
+    "signIn": "Sign in",
+    "contact": "Contact",
+    "footerHeader": "Tivero",
+    "footerLinks": [
+      { "label": "Tivero website", "href": "https://tivero.app/{site}" },
+      { "label": "Privacy policy", "href": "https://tivero.app/{site}/privacy" },
+      { "label": "Terms of service", "href": "https://tivero.app/{site}/terms" },
+      { "label": "Cookies", "href": "https://tivero.app/{site}/cookies" }
+    ]
+  }
+}

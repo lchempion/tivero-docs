@@ -1,0 +1,52 @@
+---
+title: "Outlook calendar"
+description: "Approved absences automatically appear in employees' Outlook calendars as \"Out of office\"."
+---
+
+**Who:** an Administrator or the Owner in Tivero, plus a Microsoft 365 administrator (one-time consent).
+**Prerequisites:** a [connected Microsoft 365 integration](/en/microsoft-365/connect), people [synced from the directory](/en/microsoft-365/directory-sync), and the Start plan or higher.
+**Where:** **Integrations → Microsoft 365 → Outlook Calendar**.
+
+## Turn on syncing
+
+<Steps>
+  <Step title="Turn it on">
+    Click **Turn on syncing**.
+  </Step>
+  <Step title="Grant consent">
+    Microsoft requires an administrator permission to create and delete events in your organization's calendars. Click **Continue with Microsoft** and sign in with a Microsoft 365 administrator account.
+  </Step>
+  <Step title="Done">
+    When you're back in Tivero, syncing is on. Tivero also adds ongoing and upcoming approved absences.
+  </Step>
+</Steps>
+
+## What the event looks like
+
+- An all-day event in the person's calendar, shown as **Out of office**.
+- Private, with a neutral title. It **doesn't include** the absence type or the comment.
+- One event per approved request.
+- It appears within a few minutes of approval.
+
+Tivero uses this access only for people synced with this workspace.
+
+## What happens when things change
+
+| Situation | Result |
+|---|---|
+| A request is approved | The event is added. |
+| An approved request is cancelled | The event is removed. |
+| Syncing is turned off | New absences don't reach Outlook. Existing events stay. |
+
+<Note>
+  Syncing is one-way: from Tivero to Outlook. Changes made in Outlook don't come back to Tivero. Partial-day absences aren't synced.
+</Note>
+
+## People who need attention
+
+If events can't be created for some people, Tivero shows how many people need attention. See [Microsoft 365 issues](/en/troubleshooting/microsoft-365-issues).
+
+## Related articles
+
+- [Microsoft Teams](/en/microsoft-365/teams)
+- [Absence calendar and iCal subscription](/en/calendars/absence-calendar)

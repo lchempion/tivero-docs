@@ -1,0 +1,56 @@
+---
+title: "Synchronizacja osób z Entra ID"
+description: "Importuj i aktualizuj osoby w Tivero na podstawie katalogu Microsoft Entra ID, z podglądem zmian przed zapisem."
+---
+
+**Kto:** Administrator lub Właściciel.
+**Wymagania:** [połączona integracja Microsoft 365](/pl/microsoft-365/connect), plan Growth lub Enterprise (albo okres próbny).
+**Gdzie:** **Integracje → Microsoft 365 → Osoby — Microsoft Entra ID**.
+
+## Pierwsza synchronizacja
+
+<Steps>
+  <Step title="Przygotuj podgląd">
+    Kliknij **Podgląd zmian**. Tivero porówna katalog z osobami w Tivero. Nic nie zostanie jeszcze zapisane.
+  </Step>
+  <Step title="Sprawdź plan zmian">
+    Podgląd dzieli osoby na grupy: **Nowe osoby**, **Do aktualizacji**, **Kandydaci do dezaktywacji**, **Konflikty** i **Bez zmian**.
+  </Step>
+  <Step title="Zastosuj">
+    Kliknij **Zastosuj**, aby zapisać zmiany.
+  </Step>
+</Steps>
+
+**Wynik:** nowe osoby pojawiają się na liście **Osoby** ze statusem **Zaimportowany**. Tivero **nie wysyła** im zaproszeń automatycznie — zaproś je, gdy będą gotowe. Zobacz [Dodawanie i zapraszanie osób](/pl/people/add-and-invite-people).
+
+Później możesz uruchomić synchronizację ręcznie przyciskiem **Synchronizuj teraz**.
+
+## Jakie dane są synchronizowane
+
+Adres e-mail, imię, nazwisko, nazwa wyświetlana, stanowisko, dział, stan konta oraz — jeśli włączysz synchronizację managerów — przełożony. Tivero tylko odczytuje katalog; nigdy nic w nim nie zmienia.
+
+## Ustawienia synchronizacji
+
+| Ustawienie | Co robi |
+|---|---|
+| **Automatyczna synchronizacja** | Codzienny import i aktualizacja pól. Kandydaci do dezaktywacji nadal wymagają ręcznego potwierdzenia. |
+| **Synchronizacja managerów** | Ustawia przełożonego na podstawie katalogu, co zasila [ścieżkę akceptacji](/pl/time-off/approval-process). Nigdy nie usuwa istniejącego przełożonego. |
+| **Automatyczne offboardowanie** | Dezaktywuje osoby, które zniknęły z katalogu lub są wyłączone dłużej niż określoną liczbę dni. **Domyślnie wyłączone.** |
+
+## Kandydaci do dezaktywacji
+
+Osoby, które zniknęły z katalogu albo mają wyłączone konto, trafiają do grupy **Kandydaci do dezaktywacji**. Nie są dezaktywowane automatycznie — dezaktywuje je dział kadr ręcznie na liście **Osoby**, chyba że włączysz automatyczne offboardowanie.
+
+<Warning>
+  Automatyczne offboardowanie dezaktywuje osoby bez udziału człowieka. Włącz je dopiero, gdy import i dopasowanie osób działają poprawnie na Twoich danych. Tivero wymaga kilku kolejnych pełnych synchronizacji na tym samym zakresie, zanim pozwoli je włączyć. Ma też bezpiecznik: przy nagłym wzroście liczby kandydatów nie dezaktywuje nikogo i wstrzymuje się do Twojej decyzji.
+</Warning>
+
+## Konflikty
+
+Konflikt oznacza, że Tivero nie może jednoznacznie dopasować osoby z katalogu do osoby w Tivero. Rozwiąż konflikt w Tivero albo w katalogu i uruchom synchronizację ponownie.
+
+## Powiązane artykuły
+
+- [Kalendarz Outlook](/pl/microsoft-365/outlook-calendar)
+- [Zarządzanie dostępem](/pl/people/manage-access)
+- [Problemy z Microsoft 365](/pl/troubleshooting/microsoft-365-issues)

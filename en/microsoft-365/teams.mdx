@@ -1,0 +1,67 @@
+---
+title: "Microsoft Teams"
+description: "Publish the Tivero app in Teams, turn on notifications with in-chat approvals, and set up the Tivero tabs."
+---
+
+With the Tivero app in Microsoft Teams, approvers get requests in a private chat and decide without leaving Teams, and employees see their absences and team availability in tabs.
+
+**Who:** an Administrator or the Owner in Tivero, a Microsoft 365 administrator (consent) and a Teams administrator (publishing the app).
+**Prerequisites:** a [connected Microsoft 365 integration](/en/microsoft-365/connect), people [synced from the directory](/en/microsoft-365/directory-sync), and the Growth or Enterprise plan (or the trial).
+**Where:** **Integrations → Microsoft 365 → Microsoft Teams**.
+
+## Set up Teams
+
+<Steps>
+  <Step title="Grant administrator consent">
+    If Tivero shows **Microsoft Teams administrator consent required**, click **Grant administrator consent**. A Microsoft 365 administrator allows Tivero, once, to read the Teams app catalog and install only the Tivero app in it.
+  </Step>
+  <Step title="Download the app package">
+    In the **Teams app package** section, click **Download the Tivero package**.
+  </Step>
+  <Step title="Publish the app in your organization">
+    A Teams administrator uploads the package in Teams Admin Center: **Teams apps → Manage apps → Upload new app**.
+  </Step>
+  <Step title="Turn on notifications">
+    Turn on **Teams notifications**. Tivero installs the app for the people who need it. Microsoft may take a moment — notifications start arriving on their own.
+  </Step>
+  <Step title="Check it works">
+    Click **Send a test notification**.
+  </Step>
+</Steps>
+
+<Note>
+  The Tivero app isn't available in the Microsoft Teams store. Your organization's catalog holds a copy of the package as it was when you published it — a newer version doesn't arrive on its own. If the **Current version** in Tivero differs from the one in Teams Admin Center, upload it again through **Manage apps → Tivero → Update**.
+</Note>
+
+## Notifications and approvals in chat
+
+- Requests and decisions arrive in a private chat with the Tivero app.
+- A request card has **Approve**, **Decline** and **Details** buttons. The same permissions apply as in the Tivero app.
+- If the request was already decided elsewhere, the card shows that and doesn't let anyone decide twice.
+- Private absence types show as "Absence".
+- Email notifications keep working.
+
+## Tivero tabs in Teams
+
+The app has two tabs:
+
+| Tab | What it shows |
+|---|---|
+| **My absences** | Your balance and absences. You can also submit a **New request** here. |
+| **Team** | Team availability. |
+
+Before employees open the tabs, an administrator in your organization has to approve access with Microsoft once: in Tivero, click **Set up Teams tabs**. Without it the tabs can't sign anybody in.
+
+## People without notifications
+
+If Tivero shows **Some people cannot receive notifications**, check that these people have a Microsoft Teams licence and an active account in your organization.
+
+## Turn off notifications
+
+Turn off **Teams notifications**. New notifications aren't sent to Teams. The app stays installed.
+
+## Related articles
+
+- [Approve requests](/en/time-off/approve-requests)
+- [Microsoft 365 issues](/en/troubleshooting/microsoft-365-issues)
+- [Disconnect the integration](/en/microsoft-365/disconnect)

@@ -1,0 +1,54 @@
+---
+title: "Microsoft 365 — przegląd"
+description: "Co daje integracja z Microsoft 365: synchronizacja osób z Entra ID, nieobecności w kalendarzach Outlook i akceptacje w Microsoft Teams."
+---
+
+Integracja z Microsoft 365 łączy Tivero z katalogiem i narzędziami Twojej organizacji.
+
+<CardGroup cols={3}>
+  <Card title="Osoby z Entra ID" icon="address-book" href="/pl/microsoft-365/directory-sync">
+    Import i aktualizacja osób z katalogu Microsoft Entra ID.
+  </Card>
+  <Card title="Kalendarz Outlook" icon="calendar-check" href="/pl/microsoft-365/outlook-calendar">
+    Zatwierdzone nieobecności w kalendarzach pracowników jako „Poza biurem”.
+  </Card>
+  <Card title="Microsoft Teams" icon="comments" href="/pl/microsoft-365/teams">
+    Powiadomienia, akceptacje i zakładki Tivero w Teams.
+  </Card>
+</CardGroup>
+
+## Wymagania
+
+| Wymaganie | Szczegóły |
+|---|---|
+| **Rola w Tivero** | Integracje konfiguruje Administrator lub Właściciel. |
+| **Plan Tivero** | Synchronizacja z kalendarzem Outlook — od planu Start. Import osób, automatyczna synchronizacja katalogu i Microsoft Teams — plan Growth lub Enterprise. W okresie próbnym dostępne są wszystkie funkcje Growth. |
+| **Microsoft 365** | Administrator Microsoft 365 w Twojej organizacji, który udzieli zgód. Do publikacji aplikacji w Teams potrzebny jest administrator Teams. |
+
+## Kolejność wdrożenia
+
+<Steps>
+  <Step title="Połącz Microsoft 365">
+    [Połącz integrację](/pl/microsoft-365/connect) samodzielnie albo przekaż autoryzację działowi IT.
+  </Step>
+  <Step title="Zsynchronizuj osoby">
+    Zacznij od [synchronizacji osób](/pl/microsoft-365/directory-sync). Kalendarz i Teams działają dla osób zsynchronizowanych z katalogiem.
+  </Step>
+  <Step title="Włącz kalendarz Outlook">
+    [Włącz synchronizację kalendarza](/pl/microsoft-365/outlook-calendar).
+  </Step>
+  <Step title="Włącz Microsoft Teams">
+    [Opublikuj aplikację Tivero i włącz powiadomienia](/pl/microsoft-365/teams).
+  </Step>
+</Steps>
+
+## Co Tivero robi, a czego nie
+
+- Tivero **odczytuje** dane z katalogu Microsoft 365. Nigdy nic w nim nie zapisuje.
+- W kalendarzach Tivero tworzy i usuwa wyłącznie wydarzenia własnych nieobecności.
+- Aplikacja Tivero dla Teams nie jest dostępna w sklepie Microsoft Teams. Administrator publikuje ją w katalogu aplikacji Twojej organizacji.
+
+## Powiązane artykuły
+
+- [Odłączanie integracji](/pl/microsoft-365/disconnect)
+- [Problemy z Microsoft 365](/pl/troubleshooting/microsoft-365-issues)

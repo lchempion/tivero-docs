@@ -1,72 +1,326 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Tivero",
+  "description": "Tivero help center: planned unavailability, absence requests, approvals and working-day calendars for teams.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#831843",
+    "light": "#f9a8d4",
+    "dark": "#be185d"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://tivero.app"
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
+  "fonts": {
+    "family": "Inter"
   },
   "contextual": {
     "options": [
       "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "view"
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+  "navigation": {
+    "languages": [
+      {
+        "language": "pl",
+        "navbar": {
+          "links": [
+            {
+              "label": "Kontakt",
+              "href": "mailto:hello@tivero.app"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Zaloguj się",
+            "href": "https://dash.tivero.app/pl/sign-in"
+          }
+        },
+        "footer": {
+          "links": [
+            {
+              "header": "Tivero",
+              "items": [
+                {
+                  "label": "Strona Tivero",
+                  "href": "https://tivero.app/pl"
+                },
+                {
+                  "label": "Polityka prywatności",
+                  "href": "https://tivero.app/pl/privacy"
+                },
+                {
+                  "label": "Regulamin",
+                  "href": "https://tivero.app/pl/terms"
+                },
+                {
+                  "label": "Pliki cookie",
+                  "href": "https://tivero.app/pl/cookies"
+                }
+              ]
+            }
+          ]
+        },
+        "groups": [
+          {
+            "group": "Pierwsze kroki",
+            "icon": "rocket",
+            "pages": [
+              "pl/getting-started/overview",
+              "pl/getting-started/create-workspace",
+              "pl/getting-started/admin-quick-start",
+              "pl/getting-started/employee-quick-start"
+            ]
+          },
+          {
+            "group": "Role",
+            "icon": "users-gear",
+            "pages": [
+              "pl/roles/roles-and-permissions",
+              "pl/roles/manager-guide"
+            ]
+          },
+          {
+            "group": "Osoby i zespoły",
+            "icon": "user-group",
+            "pages": [
+              "pl/people/add-and-invite-people",
+              "pl/people/import-people",
+              "pl/people/teams-and-supervisors",
+              "pl/people/manage-access"
+            ]
+          },
+          {
+            "group": "Nieobecności",
+            "icon": "umbrella-beach",
+            "pages": [
+              "pl/time-off/key-concepts",
+              "pl/time-off/absence-types",
+              "pl/time-off/absence-policies",
+              "pl/time-off/balances",
+              "pl/time-off/request-absence",
+              "pl/time-off/approve-requests",
+              "pl/time-off/approval-process",
+              "pl/time-off/approval-delegation",
+              "pl/time-off/cancel-request"
+            ]
+          },
+          {
+            "group": "Dni pracy i kalendarze",
+            "icon": "calendar-days",
+            "pages": [
+              "pl/calendars/how-working-days-are-counted",
+              "pl/calendars/holiday-calendar",
+              "pl/calendars/work-schedules",
+              "pl/calendars/company-days",
+              "pl/calendars/work-locations",
+              "pl/calendars/absence-calendar"
+            ]
+          },
+          {
+            "group": "Raporty i eksport",
+            "icon": "chart-column",
+            "pages": [
+              "pl/reports/reports",
+              "pl/reports/exports"
+            ]
+          },
+          {
+            "group": "Microsoft 365",
+            "icon": "microsoft",
+            "pages": [
+              "pl/microsoft-365/overview",
+              "pl/microsoft-365/connect",
+              "pl/microsoft-365/directory-sync",
+              "pl/microsoft-365/outlook-calendar",
+              "pl/microsoft-365/teams",
+              "pl/microsoft-365/disconnect"
+            ]
+          },
+          {
+            "group": "Plan i płatności",
+            "icon": "credit-card",
+            "pages": [
+              "pl/billing/plans-and-trial",
+              "pl/billing/subscription-and-payments"
+            ]
+          },
+          {
+            "group": "Konto, bezpieczeństwo i prywatność",
+            "icon": "shield-halved",
+            "pages": [
+              "pl/account/sign-in-and-account",
+              "pl/account/privacy",
+              "pl/account/workspace-data"
+            ]
+          },
+          {
+            "group": "Rozwiązywanie problemów",
+            "icon": "life-ring",
+            "pages": [
+              "pl/troubleshooting/overview",
+              "pl/troubleshooting/cannot-submit-request",
+              "pl/troubleshooting/holiday-calendar-needs-setup",
+              "pl/troubleshooting/approval-issues",
+              "pl/troubleshooting/invitation-and-access",
+              "pl/troubleshooting/microsoft-365-issues",
+              "pl/troubleshooting/billing-issues"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "navbar": {
+          "links": [
+            {
+              "label": "Contact",
+              "href": "mailto:hello@tivero.app"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Sign in",
+            "href": "https://dash.tivero.app/en/sign-in"
+          }
+        },
+        "footer": {
+          "links": [
+            {
+              "header": "Tivero",
+              "items": [
+                {
+                  "label": "Tivero website",
+                  "href": "https://tivero.app/en"
+                },
+                {
+                  "label": "Privacy policy",
+                  "href": "https://tivero.app/en/privacy"
+                },
+                {
+                  "label": "Terms of service",
+                  "href": "https://tivero.app/en/terms"
+                },
+                {
+                  "label": "Cookies",
+                  "href": "https://tivero.app/en/cookies"
+                }
+              ]
+            }
+          ]
+        },
+        "groups": [
+          {
+            "group": "Getting started",
+            "icon": "rocket",
+            "pages": [
+              "en/getting-started/overview",
+              "en/getting-started/create-workspace",
+              "en/getting-started/admin-quick-start",
+              "en/getting-started/employee-quick-start"
+            ]
+          },
+          {
+            "group": "Roles",
+            "icon": "users-gear",
+            "pages": [
+              "en/roles/roles-and-permissions",
+              "en/roles/manager-guide"
+            ]
+          },
+          {
+            "group": "People and teams",
+            "icon": "user-group",
+            "pages": [
+              "en/people/add-and-invite-people",
+              "en/people/import-people",
+              "en/people/teams-and-supervisors",
+              "en/people/manage-access"
+            ]
+          },
+          {
+            "group": "Time off",
+            "icon": "umbrella-beach",
+            "pages": [
+              "en/time-off/key-concepts",
+              "en/time-off/absence-types",
+              "en/time-off/absence-policies",
+              "en/time-off/balances",
+              "en/time-off/request-absence",
+              "en/time-off/approve-requests",
+              "en/time-off/approval-process",
+              "en/time-off/approval-delegation",
+              "en/time-off/cancel-request"
+            ]
+          },
+          {
+            "group": "Working days and calendars",
+            "icon": "calendar-days",
+            "pages": [
+              "en/calendars/how-working-days-are-counted",
+              "en/calendars/holiday-calendar",
+              "en/calendars/work-schedules",
+              "en/calendars/company-days",
+              "en/calendars/work-locations",
+              "en/calendars/absence-calendar"
+            ]
+          },
+          {
+            "group": "Reports and exports",
+            "icon": "chart-column",
+            "pages": [
+              "en/reports/reports",
+              "en/reports/exports"
+            ]
+          },
+          {
+            "group": "Microsoft 365",
+            "icon": "microsoft",
+            "pages": [
+              "en/microsoft-365/overview",
+              "en/microsoft-365/connect",
+              "en/microsoft-365/directory-sync",
+              "en/microsoft-365/outlook-calendar",
+              "en/microsoft-365/teams",
+              "en/microsoft-365/disconnect"
+            ]
+          },
+          {
+            "group": "Plan and billing",
+            "icon": "credit-card",
+            "pages": [
+              "en/billing/plans-and-trial",
+              "en/billing/subscription-and-payments"
+            ]
+          },
+          {
+            "group": "Account, security and privacy",
+            "icon": "shield-halved",
+            "pages": [
+              "en/account/sign-in-and-account",
+              "en/account/privacy",
+              "en/account/workspace-data"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "icon": "life-ring",
+            "pages": [
+              "en/troubleshooting/overview",
+              "en/troubleshooting/cannot-submit-request",
+              "en/troubleshooting/holiday-calendar-needs-setup",
+              "en/troubleshooting/approval-issues",
+              "en/troubleshooting/invitation-and-access",
+              "en/troubleshooting/microsoft-365-issues",
+              "en/troubleshooting/billing-issues"
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

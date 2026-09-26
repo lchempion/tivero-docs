@@ -5,3 +5,8 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Repository tooling, not customer pages
+AGENTS.md
+scripts/
+i18n/

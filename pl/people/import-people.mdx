@@ -1,0 +1,65 @@
+---
+title: "Import osób z pliku"
+description: "Zaimportuj listę osób z pliku CSV lub XLSX, dopasuj kolumny i sprawdź podgląd przed importem."
+---
+
+**Kto:** Kadry (HR), Administrator, Właściciel.
+**Wymagania:** plik CSV lub XLSX, w którym pierwszy wiersz zawiera nagłówki kolumn.
+
+## Przygotuj plik
+
+Każdy wiersz to jedna osoba. Wymagane są trzy kolumny: imię, nazwisko i adres e-mail. Pozostałe są opcjonalne.
+
+| Pole w Tivero | Wymagane | Uwagi |
+|---|---|---|
+| **Imię** | tak | |
+| **Nazwisko** | tak | |
+| **Email** | tak | Klucz konta — nie zmienisz go później. |
+| **Forma współpracy** | nie | Np. umowa o pracę albo B2B. |
+| **Data rozpoczęcia** | nie | |
+| **Kraj profilu** | nie | Dane profilu. **Nie zmienia** kalendarza świąt — ten wynika z miejsca pracy osoby. |
+| **Język** | nie | |
+| **Zespół (nazwa)** | nie | Nazwa zespołu w Tivero. |
+| **Saldo urlopu (dni)** | nie | Saldo początkowe w dniach. |
+
+## Zaimportuj osoby
+
+<Steps>
+  <Step title="Otwórz import">
+    Przejdź do **Osoby** i kliknij **Importuj**.
+  </Step>
+  <Step title="Plik">
+    Kliknij **Wybierz plik…** i wskaż plik CSV lub XLSX.
+  </Step>
+  <Step title="Mapowanie">
+    Dopasuj kolumny pliku do pól Tivero. Kolumny, których nie chcesz importować, ustaw na **— pomiń —**. Pola oznaczone gwiazdką są wymagane.
+  </Step>
+  <Step title="Podgląd">
+    Sprawdź liczbę poprawnych i błędnych wierszy. Wiersze z błędami zostaną pominięte przy imporcie.
+  </Step>
+  <Step title="Gotowe">
+    Zobaczysz, ile osób utworzono i ile pominięto.
+  </Step>
+</Steps>
+
+## Po imporcie
+
+Zaimportowane osoby mają status **Zaimportowany**. Tivero nie wysyła im zaproszeń automatycznie. Gdy będą gotowe, otwórz osobę na liście **Osoby** i kliknij **Wyślij zaproszenie**.
+
+Sprawdź też, czy osoby mają przypisaną zasadę i przełożonego. Banery na liście **Osoby** pokazują, komu brakuje salda albo osoby zatwierdzającej.
+
+<Tip>
+  Jeśli Twoja organizacja korzysta z Microsoft 365, możesz zamiast pliku [synchronizować osoby z Microsoft Entra ID](/pl/microsoft-365/directory-sync).
+</Tip>
+
+## Jeśli coś nie działa
+
+- **„Nie udało się odczytać pliku”** — sprawdź, czy plik to CSV lub XLSX i czy pierwszy wiersz zawiera nagłówki.
+- **„Plik jest zbyt duży”** — podziel plik na mniejsze części.
+- Wiersze pominięte w podglądzie — popraw je w pliku i zaimportuj ponownie tylko te wiersze.
+
+## Powiązane artykuły
+
+- [Dodawanie i zapraszanie osób](/pl/people/add-and-invite-people)
+- [Zespoły i przełożeni](/pl/people/teams-and-supervisors)
+- [Salda](/pl/time-off/balances)

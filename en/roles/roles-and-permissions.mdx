@@ -1,0 +1,70 @@
+---
+title: "Roles and permissions"
+description: "The five roles in Tivero, what each one can see and do, and how to change a person's role."
+---
+
+Everyone with access to Tivero has one role in a given workspace. The role decides what the person sees in the menu and what they can do.
+
+## Roles
+
+| Role | For whom | In short |
+|---|---|---|
+| **Employee** | Everyone in the organization | Submits requests, sees their own balances and the calendar. |
+| **Manager** | Team supervisors | Approves requests and sees their team's absences. |
+| **HR** | The HR department | Manages people, policies, limits and absence types. |
+| **Administrator** | People who run Tivero | Manages workspace settings, people, policies, integrations and the plan. |
+| **Owner** | The person who created the workspace (or took over ownership) | Full access, including ownership transfer and deleting the organization. |
+
+## What each role sees
+
+| Section | Employee | Manager | HR | Administrator | Owner |
+|---|---|---|---|---|---|
+| Dashboard, Calendar, Requests, Settings | ✓ | ✓ | ✓ | ✓ | ✓ |
+| People, Teams, Reports | — | own team only, read-only | ✓ | ✓ | ✓ |
+| Absence policies, Absence types | — | — | ✓ | ✓ | ✓ |
+| Integrations | — | — | — | ✓ | ✓ |
+| Plan and billing | — | — | — | ✓ | ✓ |
+
+## Key permissions
+
+| Action | Employee | Manager | HR | Administrator | Owner |
+|---|---|---|---|---|---|
+| Submit own requests | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Approve requests | when named as the approver | when named as the approver (usually for their own team) | when named as the approver | ✓ | ✓ |
+| Reassign an approval to someone else | — | — | ✓ | ✓ | ✓ |
+| Add people, import, balances | — | — | ✓ | ✓ | ✓ |
+| Policies, absence types, schedules, company days | — | — | ✓ | ✓ | ✓ |
+| Data export | — | — | ✓ | ✓ | ✓ |
+| Teams (create and edit) | — | — | — | ✓ | ✓ |
+| Change a member's role | — | — | — | ✓ | ✓ |
+| Integrations, organization settings, plan | — | — | — | ✓ | ✓ |
+| Transfer ownership, delete the organization | — | — | — | — | ✓ |
+
+<Note>
+  A request is decided by the approver assigned to the current stage, whatever their role, and also by Administrators and the Owner. Nobody approves their own request. Details: [How approval works](/en/time-off/approval-process).
+</Note>
+
+## Change a person's role
+
+**Who:** Administrator or Owner.
+
+<Steps>
+  <Step title="Open the person">
+    Go to **People** and open the person for editing.
+  </Step>
+  <Step title="Choose the access role">
+    Change the access role and save. If the person hasn't accepted their invitation yet, the role is granted when they do.
+  </Step>
+</Steps>
+
+The **Settings → Members and roles** tab shows how many people have each role, and what the roles mean.
+
+<Warning>
+  The Owner role can't be assigned in the person dialog. The Owner can **transfer ownership** to another active member in **Settings → Members and roles**. After the transfer, the previous owner becomes an Administrator. To confirm, you type the new owner's email address. You can't undo this on your own.
+</Warning>
+
+## Related articles
+
+- [Manager guide](/en/roles/manager-guide)
+- [Manage access](/en/people/manage-access)
+- [Teams and supervisors](/en/people/teams-and-supervisors)

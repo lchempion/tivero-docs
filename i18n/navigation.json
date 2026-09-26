@@ -1,0 +1,150 @@
+{
+  "$comment": "Logical navigation shared by every locale. A page id is the path WITHOUT the locale prefix; the file for locale X is <X>/<id>.mdx. Labels are per locale. Edit this file, then run `npm run build:nav`.",
+  "groups": [
+    {
+      "id": "getting-started",
+      "icon": "rocket",
+      "label": {
+        "pl": "Pierwsze kroki",
+        "en": "Getting started"
+      },
+      "pages": [
+        "getting-started/overview",
+        "getting-started/create-workspace",
+        "getting-started/admin-quick-start",
+        "getting-started/employee-quick-start"
+      ]
+    },
+    {
+      "id": "roles",
+      "icon": "users-gear",
+      "label": {
+        "pl": "Role",
+        "en": "Roles"
+      },
+      "pages": [
+        "roles/roles-and-permissions",
+        "roles/manager-guide"
+      ]
+    },
+    {
+      "id": "people",
+      "icon": "user-group",
+      "label": {
+        "pl": "Osoby i zespoły",
+        "en": "People and teams"
+      },
+      "pages": [
+        "people/add-and-invite-people",
+        "people/import-people",
+        "people/teams-and-supervisors",
+        "people/manage-access"
+      ]
+    },
+    {
+      "id": "time-off",
+      "icon": "umbrella-beach",
+      "label": {
+        "pl": "Nieobecności",
+        "en": "Time off"
+      },
+      "pages": [
+        "time-off/key-concepts",
+        "time-off/absence-types",
+        "time-off/absence-policies",
+        "time-off/balances",
+        "time-off/request-absence",
+        "time-off/approve-requests",
+        "time-off/approval-process",
+        "time-off/approval-delegation",
+        "time-off/cancel-request"
+      ]
+    },
+    {
+      "id": "calendars",
+      "icon": "calendar-days",
+      "label": {
+        "pl": "Dni pracy i kalendarze",
+        "en": "Working days and calendars"
+      },
+      "pages": [
+        "calendars/how-working-days-are-counted",
+        "calendars/holiday-calendar",
+        "calendars/work-schedules",
+        "calendars/company-days",
+        "calendars/work-locations",
+        "calendars/absence-calendar"
+      ]
+    },
+    {
+      "id": "reports",
+      "icon": "chart-column",
+      "label": {
+        "pl": "Raporty i eksport",
+        "en": "Reports and exports"
+      },
+      "pages": [
+        "reports/reports",
+        "reports/exports"
+      ]
+    },
+    {
+      "id": "microsoft-365",
+      "icon": "microsoft",
+      "label": {
+        "pl": "Microsoft 365",
+        "en": "Microsoft 365"
+      },
+      "pages": [
+        "microsoft-365/overview",
+        "microsoft-365/connect",
+        "microsoft-365/directory-sync",
+        "microsoft-365/outlook-calendar",
+        "microsoft-365/teams",
+        "microsoft-365/disconnect"
+      ]
+    },
+    {
+      "id": "billing",
+      "icon": "credit-card",
+      "label": {
+        "pl": "Plan i płatności",
+        "en": "Plan and billing"
+      },
+      "pages": [
+        "billing/plans-and-trial",
+        "billing/subscription-and-payments"
+      ]
+    },
+    {
+      "id": "account",
+      "icon": "shield-halved",
+      "label": {
+        "pl": "Konto, bezpieczeństwo i prywatność",
+        "en": "Account, security and privacy"
+      },
+      "pages": [
+        "account/sign-in-and-account",
+        "account/privacy",
+        "account/workspace-data"
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "icon": "life-ring",
+      "label": {
+        "pl": "Rozwiązywanie problemów",
+        "en": "Troubleshooting"
+      },
+      "pages": [
+        "troubleshooting/overview",
+        "troubleshooting/cannot-submit-request",
+        "troubleshooting/holiday-calendar-needs-setup",
+        "troubleshooting/approval-issues",
+        "troubleshooting/invitation-and-access",
+        "troubleshooting/microsoft-365-issues",
+        "troubleshooting/billing-issues"
+      ]
+    }
+  ]
+}

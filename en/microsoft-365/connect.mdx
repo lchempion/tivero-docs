@@ -1,0 +1,65 @@
+---
+title: "Connect Microsoft 365"
+description: "Connect Tivero to Microsoft 365 yourself, or hand the authorization off to your IT administrator."
+---
+
+**Who:** an Administrator or the Owner in Tivero, together with a Microsoft 365 administrator.
+**Where:** the **Configuration → Integrations → Microsoft 365** menu.
+
+## Connect yourself
+
+Use this option if you're also a Microsoft 365 administrator in your organization.
+
+<Steps>
+  <Step title="Open the integration">
+    Go to **Integrations** and open **Microsoft 365**.
+  </Step>
+  <Step title="Connect">
+    Click **Connect**. Sign in to Microsoft with an administrator account and accept the permissions.
+  </Step>
+  <Step title="Check the status">
+    When you're back in Tivero, the status changes to **Connected**.
+  </Step>
+</Steps>
+
+## Hand off authorization to IT
+
+Use this option if someone else holds Microsoft 365 administrator rights.
+
+<Steps>
+  <Step title="Generate the link">
+    Click **Hand off to IT**. Optionally enter the **IT admin email** — we then email the link directly. Click **Generate link** or **Generate and send**.
+  </Step>
+  <Step title="Share the link">
+    If you didn't enter an address, copy the link with **Copy link** and share it with the administrator. The link expires in 72 hours.
+  </Step>
+  <Step title="The administrator authorizes access">
+    The administrator opens the link, signs in to Microsoft and accepts the permissions. The status in Tivero changes to **Needs confirmation**.
+  </Step>
+  <Step title="Confirm the organization">
+    Check that this is the right Microsoft 365 organization and click **Confirm and activate**. If it isn't your organization, click **Reject** — the integration is disconnected.
+  </Step>
+</Steps>
+
+<Tip>
+  You can generate the link again with **Regenerate**, for example after it expires. Cancel the authorization request with **Cancel**.
+</Tip>
+
+## Connection statuses
+
+| Status | What it means |
+|---|---|
+| **Not connected** | The integration isn't set up. |
+| **Connecting…** / **Awaiting IT authorization** | Waiting for authorization in Microsoft. |
+| **Needs confirmation** | Your IT admin authorized access — confirm the organization. |
+| **Connected** | The integration is working. |
+| **Needs reconnection** | Microsoft revoked or invalidated access. Click **Reconnect**. |
+
+## What's next
+
+Start with [people sync](/en/microsoft-365/directory-sync).
+
+## Related articles
+
+- [Microsoft 365 overview](/en/microsoft-365/overview)
+- [Microsoft 365 issues](/en/troubleshooting/microsoft-365-issues)
