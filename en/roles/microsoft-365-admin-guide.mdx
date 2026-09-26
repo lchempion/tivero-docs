@@ -1,0 +1,66 @@
+---
+title: "Microsoft 365 admin guide"
+description: "Requirements, consents and rollout order for the Tivero Microsoft 365 integration: the people directory, the Outlook calendar and Microsoft Teams."
+---
+
+This guide is for whoever connects Tivero to Microsoft 365 — usually an Administrator in Tivero together with an IT administrator. Detailed instructions are in the linked articles.
+
+## Requirements
+
+| Who / what | Why |
+|---|---|
+| **Administrator or Owner in Tivero** | Only these roles see **Integrations**. |
+| **Microsoft 365 administrator** | Grants consent to Tivero (connection, calendar, Teams). |
+| **Teams administrator** | Publishes the Tivero app in the organization's app catalog. |
+| **Tivero plan** | Outlook calendar — from the Start plan. People import and sync, and Teams — the Growth or Enterprise plan (or the trial). |
+
+## Rollout order
+
+<Steps>
+  <Step title="Connect Microsoft 365">
+    In **Integrations → Microsoft 365**, click **Connect**, or **Hand off to IT** if someone else grants consent. See [Connect Microsoft 365](/en/microsoft-365/connect).
+
+    <Frame>
+      <img src="/images/en/m365-not-connected.webp" alt="The Microsoft 365 card with the Not connected status and the Connect and Hand off to IT buttons" />
+    </Frame>
+  </Step>
+  <Step title="Sync people">
+    **Preview changes** first, then **Apply**. The calendar and Teams work for people synced from the directory. See [Sync people from Entra ID](/en/microsoft-365/directory-sync).
+  </Step>
+  <Step title="Turn on the Outlook calendar">
+    **Turn on syncing** and grant administrator consent in Microsoft. See [Outlook calendar](/en/microsoft-365/outlook-calendar).
+  </Step>
+  <Step title="Turn on Microsoft Teams">
+    Grant administrator consent, download the app package, publish it in Teams Admin Center, turn on **Teams notifications** and set up the tabs. See [Microsoft Teams](/en/microsoft-365/teams).
+  </Step>
+</Steps>
+
+## Consents Microsoft will ask for
+
+| When | Who accepts | What it allows |
+|---|---|---|
+| **Connect** / the **Hand off to IT** link | Microsoft 365 administrator | reading the people directory |
+| **Turn on syncing** (Outlook) → **Continue with Microsoft** | Microsoft 365 administrator | creating and removing absence events in calendars |
+| **Grant administrator consent** (Teams) | Microsoft 365 administrator | reading the Teams app catalog and installing only the Tivero app |
+| **Set up Teams tabs** | an administrator in your organization | signing employees in to the Tivero tabs in Teams |
+
+Tivero only reads the directory. It never changes anything in it.
+
+## Common tasks
+
+| You want to… | Go to |
+|---|---|
+| set up a daily sync | [Sync people from Entra ID](/en/microsoft-365/directory-sync) → **Automatic synchronization** |
+| take supervisors from the directory | [Sync people from Entra ID](/en/microsoft-365/directory-sync) → **Manager synchronization** |
+| update the app in Teams | [Microsoft Teams](/en/microsoft-365/teams) → **Teams app package** |
+| disconnect the integration | [Disconnect the integration](/en/microsoft-365/disconnect) |
+
+## Common problems
+
+- [Microsoft 365 issues](/en/troubleshooting/microsoft-365-issues) — connection, sync, Outlook, Teams.
+- [Invitations and access](/en/troubleshooting/invitation-and-access) — people from the directory don't get invitations automatically.
+
+## Related articles
+
+- [Microsoft 365 overview](/en/microsoft-365/overview)
+- [Plans and trial](/en/billing/plans-and-trial)

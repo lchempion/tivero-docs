@@ -1,0 +1,67 @@
+---
+title: "Microsoft Teams"
+description: "Opublikuj aplikację Tivero w Teams, włącz powiadomienia z akceptacją wniosków na czacie i skonfiguruj zakładki Tivero."
+---
+
+Z aplikacją Tivero w Microsoft Teams osoby zatwierdzające dostają wnioski na prywatnym czacie i decydują bez wychodzenia z Teams, a pracownicy widzą swoje nieobecności i dostępność zespołu w zakładkach.
+
+**Kto:** Administrator lub Właściciel w Tivero, administrator Microsoft 365 (zgoda) i administrator Teams (publikacja aplikacji).
+**Wymagania:** [połączona integracja Microsoft 365](/pl/microsoft-365/connect), osoby [zsynchronizowane z katalogu](/pl/microsoft-365/directory-sync), plan Growth lub Enterprise (albo okres próbny).
+**Gdzie:** **Integracje → Microsoft 365 → Microsoft Teams**.
+
+## Skonfiguruj Teams
+
+<Steps>
+  <Step title="Udziel zgody administratora">
+    Jeśli Tivero pokazuje **Wymagana zgoda administratora Microsoft Teams**, kliknij **Udziel zgody administratora**. Administrator Microsoft 365 jednorazowo pozwala Tivero odczytać katalog aplikacji Teams i zainstalować w nim wyłącznie aplikację Tivero.
+  </Step>
+  <Step title="Pobierz pakiet aplikacji">
+    W sekcji **Pakiet aplikacji Teams** kliknij **Pobierz pakiet Tivero**.
+  </Step>
+  <Step title="Opublikuj aplikację w organizacji">
+    Administrator Teams wgrywa pakiet w Teams Admin Center: **Aplikacje Teams → Zarządzaj aplikacjami → Prześlij nową aplikację**.
+  </Step>
+  <Step title="Włącz powiadomienia">
+    Włącz przełącznik **Powiadomienia Teams**. Tivero zainstaluje aplikację dla osób, które jej potrzebują. Microsoft może potrzebować chwili — powiadomienia zaczną docierać same.
+  </Step>
+  <Step title="Sprawdź działanie">
+    Kliknij **Wyślij powiadomienie testowe**.
+  </Step>
+</Steps>
+
+<Note>
+  Aplikacja Tivero nie jest dostępna w sklepie Microsoft Teams. Katalog Twojej organizacji przechowuje kopię pakietu z chwili publikacji — nowsza wersja nie trafia tam sama. Gdy **Aktualna wersja** w Tivero różni się od tej w Teams Admin Center, wgraj pakiet ponownie przez **Zarządzaj aplikacjami → Tivero → Aktualizuj**.
+</Note>
+
+## Powiadomienia i akceptacje na czacie
+
+- Wnioski i decyzje trafiają na prywatny czat z aplikacją Tivero.
+- Karta wniosku ma przyciski **Akceptuj**, **Odrzuć** i **Szczegóły**. Obowiązują te same uprawnienia co w aplikacji Tivero.
+- Jeśli wniosek został już rozpatrzony gdzie indziej, karta to pokaże i nie pozwoli zdecydować drugi raz.
+- Prywatne typy nieobecności są widoczne jako „Nieobecność”.
+- Powiadomienia e-mail działają nadal.
+
+## Zakładki Tivero w Teams
+
+Aplikacja ma dwie zakładki:
+
+| Zakładka | Co pokazuje |
+|---|---|
+| **Moje** | Twoje saldo i nieobecności. Stąd złożysz też **Nowy wniosek**. |
+| **Zespół** | Dostępność zespołu. |
+
+Zanim pracownicy otworzą zakładki, administrator Twojej organizacji musi raz zatwierdzić dostęp u Microsoftu: w Tivero kliknij **Skonfiguruj zakładki w Teams**. Bez tego zakładki nie mogą nikogo zalogować.
+
+## Osoby bez powiadomień
+
+Jeśli Tivero pokazuje **Część osób nie może otrzymywać powiadomień**, sprawdź, czy te osoby mają licencję Microsoft Teams i aktywne konto w Twojej organizacji.
+
+## Wyłącz powiadomienia
+
+Wyłącz przełącznik **Powiadomienia Teams**. Nowe powiadomienia nie będą wysyłane do Teams. Aplikacja pozostaje zainstalowana.
+
+## Powiązane artykuły
+
+- [Akceptowanie wniosków](/pl/time-off/approve-requests)
+- [Problemy z Microsoft 365](/pl/troubleshooting/microsoft-365-issues)
+- [Odłączanie integracji](/pl/microsoft-365/disconnect)

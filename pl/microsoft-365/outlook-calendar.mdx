@@ -1,0 +1,52 @@
+---
+title: "Kalendarz Outlook"
+description: "Zatwierdzone nieobecności automatycznie pojawiają się w kalendarzach Outlook pracowników jako „Poza biurem”."
+---
+
+**Kto:** Administrator lub Właściciel w Tivero oraz administrator Microsoft 365 (jednorazowa zgoda).
+**Wymagania:** [połączona integracja Microsoft 365](/pl/microsoft-365/connect), osoby [zsynchronizowane z katalogu](/pl/microsoft-365/directory-sync), plan Start lub wyższy.
+**Gdzie:** **Integracje → Microsoft 365 → Outlook Calendar**.
+
+## Włącz synchronizację
+
+<Steps>
+  <Step title="Włącz">
+    Kliknij **Włącz synchronizację**.
+  </Step>
+  <Step title="Udziel zgody">
+    Microsoft wymaga uprawnienia administratora do tworzenia i usuwania wydarzeń w kalendarzach organizacji. Kliknij **Kontynuuj z Microsoft** i zaloguj się kontem administratora Microsoft 365.
+  </Step>
+  <Step title="Gotowe">
+    Po powrocie do Tivero synchronizacja jest włączona. Tivero dodaje też bieżące i przyszłe zatwierdzone nieobecności.
+  </Step>
+</Steps>
+
+## Jak wygląda wydarzenie
+
+- Całodniowe wydarzenie w kalendarzu osoby, oznaczone jako **Poza biurem**.
+- Prywatne, z neutralnym tytułem. **Nie zawiera** typu nieobecności ani komentarza.
+- Jedno wydarzenie na jeden zaakceptowany wniosek.
+- Pojawia się w ciągu kilku minut od akceptacji.
+
+Tivero korzysta z tego dostępu wyłącznie dla osób zsynchronizowanych z tą przestrzenią.
+
+## Co się dzieje przy zmianach
+
+| Sytuacja | Wynik |
+|---|---|
+| Wniosek zaakceptowany | Wydarzenie zostaje dodane. |
+| Zaakceptowany wniosek anulowany | Wydarzenie zostaje usunięte. |
+| Wyłączenie synchronizacji | Nowe nieobecności nie trafiają do Outlooka. Istniejące wydarzenia zostają. |
+
+<Note>
+  Synchronizacja działa w jedną stronę: z Tivero do Outlooka. Zmiany wprowadzone w Outlooku nie wracają do Tivero. Nieobecności na część dnia nie są synchronizowane.
+</Note>
+
+## Osoby wymagające uwagi
+
+Jeśli dla części osób nie można utworzyć wydarzeń, Tivero pokaże liczbę osób, które wymagają uwagi. Zobacz [Problemy z Microsoft 365](/pl/troubleshooting/microsoft-365-issues).
+
+## Powiązane artykuły
+
+- [Microsoft Teams](/pl/microsoft-365/teams)
+- [Kalendarz nieobecności i subskrypcja iCal](/pl/calendars/absence-calendar)

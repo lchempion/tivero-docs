@@ -1,0 +1,49 @@
+---
+title: "Microsoft 365 issues"
+description: "Troubleshooting the connection, people sync, the Outlook calendar and Microsoft Teams."
+---
+
+## Connection
+
+| Symptom | What to do |
+|---|---|
+| Status **Needs reconnection** | Microsoft revoked or invalidated access. Click **Reconnect** and sign in with a Microsoft 365 administrator account. |
+| The IT authorization link doesn't work | The link expires after 72 hours. Click **Regenerate** and share the new link. |
+| Status **Needs confirmation** | Your IT admin authorized access. Check the organization and click **Confirm and activate**. |
+| The wrong Microsoft 365 organization was authorized | Click **Reject**. The integration is disconnected and you can connect again. |
+| **Available on the Growth plan** message | Directory sync requires the Growth or Enterprise plan. See [Plans and trial](/en/billing/plans-and-trial). |
+
+## People sync
+
+| Symptom | What to do |
+|---|---|
+| Synced people didn't get invitations | This is intended — people from the directory are **Imported**. Invite them with **Send invitation**. |
+| Someone who left is still active | Deactivation candidates aren't deactivated automatically. Deactivate them manually on the **People** list. |
+| **Automatic offboarding** can't be turned on | It requires several consecutive complete syncs on the same scope. Keep syncing until Tivero lets you turn it on. |
+| **Suspended by the circuit breaker** | The sync detected a sudden spike of deactivation candidates and deactivated nobody. Review the scope in the directory, then turn the feature on again. |
+| The supervisor isn't set | Turn on **Manager synchronization**. Tivero never clears an existing supervisor. |
+
+## Outlook calendar
+
+| Symptom | What to do |
+|---|---|
+| An absence doesn't appear in Outlook | Wait a few minutes after approval. Check that the person is synced from the directory and that syncing is on. |
+| Tivero shows people who need attention | Events couldn't be created for these people. Check that they have an active account and mailbox in Microsoft 365. |
+| An event didn't disappear after syncing was turned off | This is intended — existing events stay. They disappear only when an approved request is cancelled. |
+| A partial-day absence isn't in Outlook | Partial-day absences aren't synced. |
+
+## Microsoft Teams
+
+| Symptom | What to do |
+|---|---|
+| **Microsoft Teams administrator consent required** | A Microsoft 365 administrator clicks **Grant administrator consent**. |
+| **Publish the Tivero app in Microsoft Teams** | A Teams administrator uploads the package: Teams Admin Center → **Teams apps → Manage apps → Upload new app**. |
+| The test notification doesn't arrive | Check that the Tivero app is available in your organization. After publishing, installation can take a moment. |
+| **Some people cannot receive notifications** | Check that these people have a Microsoft Teams licence and an active account. |
+| A Teams tab asks to finish setup | An administrator clicks **Set up Teams tabs** in Tivero. If the prompt doesn't go away, click **Run setup again**. |
+| Teams runs an older version of the app | Download the current package and upload it in Teams Admin Center through **Manage apps → Tivero → Update**. |
+
+## Related articles
+
+- [Microsoft 365 overview](/en/microsoft-365/overview)
+- [Microsoft Teams](/en/microsoft-365/teams)

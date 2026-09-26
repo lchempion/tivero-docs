@@ -1,0 +1,49 @@
+---
+title: "Problemy z Microsoft 365"
+description: "Rozwiązywanie problemów z połączeniem, synchronizacją osób, kalendarzem Outlook i Microsoft Teams."
+---
+
+## Połączenie
+
+| Objaw | Co zrobić |
+|---|---|
+| Status **Wymaga ponownego połączenia** | Microsoft cofnął lub unieważnił dostęp. Kliknij **Połącz ponownie** i zaloguj się kontem administratora Microsoft 365. |
+| Link autoryzacyjny dla IT nie działa | Link wygasa po 72 godzinach. Kliknij **Wygeneruj ponownie** i przekaż nowy link. |
+| Status **Wymaga potwierdzenia** | Administrator IT autoryzował dostęp. Sprawdź organizację i kliknij **Potwierdź i aktywuj**. |
+| Zaakceptowano niewłaściwą organizację Microsoft 365 | Kliknij **Odrzuć**. Integracja zostanie rozłączona i możesz połączyć ją ponownie. |
+| Komunikat **Dostępne w planie Growth** | Synchronizacja katalogu wymaga planu Growth lub Enterprise. Zobacz [Plany i okres próbny](/pl/billing/plans-and-trial). |
+
+## Synchronizacja osób
+
+| Objaw | Co zrobić |
+|---|---|
+| Zsynchronizowane osoby nie dostały zaproszeń | To zamierzone — osoby z katalogu mają status **Zaimportowany**. Zaproś je przyciskiem **Wyślij zaproszenie**. |
+| Osoba, która odeszła, nadal jest aktywna | Kandydaci do dezaktywacji nie są dezaktywowani automatycznie. Dezaktywuj ich ręcznie na liście **Osoby**. |
+| **Automatyczne offboardowanie** nie daje się włączyć | Wymaga kilku kolejnych pełnych synchronizacji na tym samym zakresie. Uruchamiaj synchronizację, aż Tivero pozwoli je włączyć. |
+| **Wstrzymane przez bezpiecznik** | Synchronizacja wykryła nagły wzrost liczby kandydatów do dezaktywacji i nikogo nie dezaktywowała. Sprawdź zakres w katalogu, a potem włącz funkcję ponownie. |
+| Przełożony się nie ustawia | Włącz **Synchronizację managerów**. Tivero nie usuwa istniejącego przełożonego. |
+
+## Kalendarz Outlook
+
+| Objaw | Co zrobić |
+|---|---|
+| Nieobecność nie pojawia się w Outlooku | Poczekaj kilka minut po akceptacji. Sprawdź, czy osoba jest zsynchronizowana z katalogiem i czy synchronizacja jest włączona. |
+| Tivero pokazuje osoby wymagające uwagi | Dla tych osób nie udało się utworzyć wydarzeń. Sprawdź, czy mają aktywne konto i skrzynkę w Microsoft 365. |
+| Wydarzenie nie zniknęło po wyłączeniu synchronizacji | To zamierzone — istniejące wydarzenia zostają. Znikają tylko po anulowaniu zaakceptowanego wniosku. |
+| Nieobecność na część dnia nie jest w Outlooku | Nieobecności na część dnia nie są synchronizowane. |
+
+## Microsoft Teams
+
+| Objaw | Co zrobić |
+|---|---|
+| **Wymagana zgoda administratora Microsoft Teams** | Administrator Microsoft 365 klika **Udziel zgody administratora**. |
+| **Opublikuj aplikację Tivero w Microsoft Teams** | Administrator Teams wgrywa pakiet: Teams Admin Center → **Aplikacje Teams → Zarządzaj aplikacjami → Prześlij nową aplikację**. |
+| Powiadomienie testowe nie dociera | Sprawdź, czy aplikacja Tivero jest dostępna w Twojej organizacji. Po publikacji instalacja może chwilę potrwać. |
+| **Część osób nie może otrzymywać powiadomień** | Sprawdź, czy te osoby mają licencję Microsoft Teams i aktywne konto. |
+| Zakładka w Teams prosi o dokończenie konfiguracji | Administrator klika w Tivero **Skonfiguruj zakładki w Teams**. Jeśli prośba nie znika, kliknij **Uruchom konfigurację ponownie**. |
+| W Teams działa starsza wersja aplikacji | Pobierz aktualny pakiet i wgraj go w Teams Admin Center przez **Zarządzaj aplikacjami → Tivero → Aktualizuj**. |
+
+## Powiązane artykuły
+
+- [Microsoft 365 — przegląd](/pl/microsoft-365/overview)
+- [Microsoft Teams](/pl/microsoft-365/teams)

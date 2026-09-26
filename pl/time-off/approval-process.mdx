@@ -1,0 +1,69 @@
+---
+title: "Jak działa akceptacja"
+description: "Kto akceptuje wnioski, co się dzieje, gdy osoba nie ma przełożonego, i jak sprawdzić ścieżkę akceptacji."
+---
+
+**Kto konfiguruje:** Kadry (HR), Administrator, Właściciel.
+**Gdzie:** **Ustawienia → Procesy akceptacji**, zespoły, strona osoby i zasady nieobecności.
+
+## Kto akceptuje wniosek
+
+Tivero wyznacza osobę zatwierdzającą w tej kolejności:
+
+<Steps>
+  <Step title="Ustawienie indywidualne osoby">
+    Jeśli na stronie osoby, w sekcji **Sposób akceptacji**, wskazano konkretną osobę zatwierdzającą, wniosek trafia do niej.
+  </Step>
+  <Step title="Ustawienie zespołu">
+    Jeśli zespół osoby ma ustawioną **Osobę zatwierdzającą wnioski zespołu** (manager zespołu albo wskazana osoba), wniosek trafia do niej.
+  </Step>
+  <Step title="Reguła organizacji">
+    W pozostałych przypadkach wniosek trafia do **Bezpośredniego przełożonego** osoby.
+  </Step>
+</Steps>
+
+Jeśli wyznaczona osoba ma aktywną [delegację](/pl/time-off/approval-delegation), wniosek trafia do jej zastępcy.
+
+## Gdy nie można użyć bezpośredniego przełożonego
+
+Osoba może nie mieć przełożonego albo jej przełożony może być nieaktywny. W **Ustawienia → Procesy akceptacji** wybierz, co wtedy zrobić:
+
+| Opcja | Co się dzieje |
+|---|---|
+| **Wyślij do wskazanej osoby** | Wniosek trafia do osoby, którą wybierzesz. |
+| **Akceptacja niewymagana** | Wniosek zostaje zarejestrowany bez akceptacji. |
+| **Zablokuj wniosek** | Osoba nie złoży wniosku, dopóki nie zostanie wskazany zatwierdzający. |
+
+**Zapasowy zatwierdzający** jest używany, gdy nie uda się wyznaczyć głównego zatwierdzającego, np. gdy przełożony jest nieaktywny.
+
+## Nikt nie akceptuje własnych wniosków
+
+Zatwierdzanie własnych wniosków jest zablokowane. Jeśli domyślnym zatwierdzającym byłaby ta sama osoba, potrzebny jest zapasowy zatwierdzający.
+
+## Sprawdź konfigurację
+
+Zakładka **Procesy akceptacji** pokazuje, ile osób ma poprawną ścieżkę akceptacji, a ile wymaga konfiguracji. Kliknij **Pokaż problemy**, aby zobaczyć osoby z problemem i przyczynę.
+
+Sekcja **Przetestuj ścieżkę akceptacji** pozwala sprawdzić, kto zatwierdzi wniosek wybranej osoby dla wybranego typu nieobecności. Wybierz **Osobę** i **Typ nieobecności**, a potem kliknij **Przetestuj**. To tylko podgląd — nie tworzy wniosku.
+
+<Frame>
+  <img src="/images/pl/approval-route-test.webp" alt="Sekcja Przetestuj ścieżkę akceptacji: osoba Anna Kowalczyk, typ Urlop wypoczynkowy i wynik 1. Tomasz Nowicki, Bezpośredni przełożony" />
+</Frame>
+
+## Akceptacja dwuetapowa
+
+W [zasadzie nieobecności](/pl/time-off/absence-policies) możesz ustawić **Dwa etapy** dla wybranych typów. Etap 1 to ścieżka opisana wyżej. W etapie 2 wniosek akceptuje konkretna osoba wskazana w zasadzie. Wniosek jest zaakceptowany dopiero po obu etapach.
+
+## Kiedy akceptacja nie jest wymagana
+
+Wniosek jest akceptowany automatycznie, gdy typ nieobecności albo zasada nie wymaga akceptacji (np. domyślnie „Zwolnienie lekarskie (L4)”).
+
+## Powiadomienia
+
+Osoba zatwierdzająca dostaje e-mail o nowym wniosku, a osoba składająca wniosek — e-mail o decyzji. Ustawisz to w **Ustawienia → Powiadomienia**.
+
+## Powiązane artykuły
+
+- [Akceptowanie wniosków](/pl/time-off/approve-requests)
+- [Zespoły i przełożeni](/pl/people/teams-and-supervisors)
+- [Problemy z akceptacją](/pl/troubleshooting/approval-issues)

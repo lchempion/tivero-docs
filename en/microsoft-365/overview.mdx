@@ -1,0 +1,54 @@
+---
+title: "Microsoft 365 overview"
+description: "What the Microsoft 365 integration gives you: people synced from Entra ID, absences in Outlook calendars and approvals in Microsoft Teams."
+---
+
+The Microsoft 365 integration connects Tivero to your organization's directory and tools.
+
+<CardGroup cols={3}>
+  <Card title="People from Entra ID" icon="address-book" href="/en/microsoft-365/directory-sync">
+    Import and update people from the Microsoft Entra ID directory.
+  </Card>
+  <Card title="Outlook calendar" icon="calendar-check" href="/en/microsoft-365/outlook-calendar">
+    Approved absences in employees' calendars as "Out of office".
+  </Card>
+  <Card title="Microsoft Teams" icon="comments" href="/en/microsoft-365/teams">
+    Notifications, approvals and Tivero tabs in Teams.
+  </Card>
+</CardGroup>
+
+## Requirements
+
+| Requirement | Details |
+|---|---|
+| **Role in Tivero** | Integrations are set up by an Administrator or the Owner. |
+| **Tivero plan** | Outlook calendar sync — from the Start plan. People import, automatic directory sync and Microsoft Teams — the Growth or Enterprise plan. During the trial, all Growth features are available. |
+| **Microsoft 365** | A Microsoft 365 administrator in your organization to grant consent. Publishing the app in Teams needs a Teams administrator. |
+
+## Rollout order
+
+<Steps>
+  <Step title="Connect Microsoft 365">
+    [Connect the integration](/en/microsoft-365/connect) yourself or hand the authorization off to IT.
+  </Step>
+  <Step title="Sync people">
+    Start with [people sync](/en/microsoft-365/directory-sync). The calendar and Teams work for people synced from the directory.
+  </Step>
+  <Step title="Turn on the Outlook calendar">
+    [Turn on calendar sync](/en/microsoft-365/outlook-calendar).
+  </Step>
+  <Step title="Turn on Microsoft Teams">
+    [Publish the Tivero app and turn on notifications](/en/microsoft-365/teams).
+  </Step>
+</Steps>
+
+## What Tivero does and doesn't do
+
+- Tivero **reads** data from your Microsoft 365 directory. It never writes anything to it.
+- In calendars, Tivero creates and removes only the events for its own absences.
+- The Tivero app for Teams isn't available in the Microsoft Teams store. An administrator publishes it in your organization's app catalog.
+
+## Related articles
+
+- [Disconnect the integration](/en/microsoft-365/disconnect)
+- [Microsoft 365 issues](/en/troubleshooting/microsoft-365-issues)

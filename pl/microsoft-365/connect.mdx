@@ -1,0 +1,69 @@
+---
+title: "Połącz Microsoft 365"
+description: "Połącz Tivero z Microsoft 365 samodzielnie albo przekaż autoryzację administratorowi IT."
+---
+
+**Kto:** Administrator lub Właściciel w Tivero, razem z administratorem Microsoft 365.
+**Gdzie:** menu **Konfiguracja → Integracje → Microsoft 365**.
+
+## Połącz samodzielnie
+
+Użyj tej opcji, jeśli jesteś jednocześnie administratorem Microsoft 365 w swojej organizacji.
+
+<Steps>
+  <Step title="Otwórz integrację">
+    Przejdź do **Integracje** i otwórz **Microsoft 365**.
+
+    <Frame>
+      <img src="/images/pl/m365-not-connected.webp" alt="Karta Microsoft 365 ze statusem Niepołączono oraz przyciskami Połącz i Przekaż do IT" />
+    </Frame>
+  </Step>
+  <Step title="Połącz">
+    Kliknij **Połącz**. Zaloguj się do Microsoft kontem administratora i zaakceptuj uprawnienia.
+  </Step>
+  <Step title="Sprawdź status">
+    Po powrocie do Tivero status zmieni się na **Połączono**.
+  </Step>
+</Steps>
+
+## Przekaż autoryzację do IT
+
+Użyj tej opcji, jeśli uprawnienia administratora Microsoft 365 ma ktoś inny.
+
+<Steps>
+  <Step title="Wygeneruj link">
+    Kliknij **Przekaż do IT**. Opcjonalnie wpisz **E-mail administratora IT** — wtedy wyślemy link bezpośrednio. Kliknij **Wygeneruj link** albo **Wygeneruj i wyślij**.
+  </Step>
+  <Step title="Przekaż link">
+    Jeśli nie podano adresu, skopiuj link przyciskiem **Kopiuj link** i przekaż go administratorowi. Link wygasa po 72 godzinach.
+  </Step>
+  <Step title="Administrator autoryzuje dostęp">
+    Administrator otwiera link, loguje się do Microsoft i akceptuje uprawnienia. Status w Tivero zmieni się na **Wymaga potwierdzenia**.
+  </Step>
+  <Step title="Potwierdź organizację">
+    Sprawdź, czy to właściwa organizacja Microsoft 365, i kliknij **Potwierdź i aktywuj**. Jeśli to nie Twoja organizacja, kliknij **Odrzuć** — integracja zostanie rozłączona.
+  </Step>
+</Steps>
+
+<Tip>
+  Link możesz wygenerować ponownie przyciskiem **Wygeneruj ponownie**, np. gdy wygasł. Żądanie autoryzacji anulujesz przyciskiem **Anuluj**.
+</Tip>
+
+## Statusy połączenia
+
+| Status | Co oznacza |
+|---|---|
+| **Niepołączono** | Integracja nie jest skonfigurowana. |
+| **Łączenie…** / **Oczekuje na autoryzację IT** | Czekamy na autoryzację w Microsoft. |
+| **Wymaga potwierdzenia** | Administrator IT autoryzował dostęp — potwierdź organizację. |
+| **Połączono** | Integracja działa. |
+| **Wymaga ponownego połączenia** | Microsoft cofnął lub unieważnił dostęp. Kliknij **Połącz ponownie**. |
+
+## Co dalej
+
+Zacznij od [synchronizacji osób](/pl/microsoft-365/directory-sync).
+
+## Powiązane artykuły
+
+- [Microsoft 365 — przegląd](/pl/microsoft-365/overview)
+- [Problemy z Microsoft 365](/pl/troubleshooting/microsoft-365-issues)

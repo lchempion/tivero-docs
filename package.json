@@ -1,0 +1,24 @@
+{
+  "name": "tivero-docs",
+  "private": true,
+  "description": "Tivero customer documentation (help.tivero.app), built with Mintlify.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "mint dev",
+    "build:nav": "node scripts/build-navigation.mjs",
+    "check:nav": "node scripts/build-navigation.mjs --check",
+    "check:locales": "node scripts/check-locale-parity.mjs",
+    "check:content": "node scripts/check-content.mjs",
+    "validate": "mint validate",
+    "links": "mint broken-links",
+    "a11y": "mint a11y",
+    "check": "npm run check:nav && npm run check:locales && npm run check:content && npm run check:publish && npm run validate && npm run links && npm run a11y",
+    "check:publish": "node scripts/check-publish-surface.mjs"
+  },
+  "devDependencies": {
+    "mint": "4.2.939"
+  }
+}

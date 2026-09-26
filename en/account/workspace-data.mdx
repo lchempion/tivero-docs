@@ -1,0 +1,59 @@
+---
+title: "Workspace data"
+description: "Data export, moving your data to another provider, access after a subscription ends, and deleting the organization."
+---
+
+## Data isolation
+
+Each workspace's data is kept separate from every other workspace. Someone who belongs to several organizations sees only that organization's data in each one.
+
+## Data export
+
+HR, Administrators and the Owner can download requests, balances and people at any time in **Settings → Data export**. See [Data export](/en/reports/exports). Export also works in read-only mode, for example after the trial or a subscription ends.
+
+## Moving your data to another provider
+
+**Who:** the Owner.
+**Where:** **Settings**, section **Moving your data to another provider**.
+
+If you're moving your data to another system, you can issue a credential for the destination provider. It only allows reading this workspace's exportable data through the switching interface and gives no access to the application.
+
+<Steps>
+  <Step title="Issue a credential">
+    Enter a name (for example the destination provider), choose **Valid for** and click **Issue credential**.
+  </Step>
+  <Step title="Copy it right away">
+    The credential is shown only once. Copy it and pass it to the destination provider over a secure channel.
+  </Step>
+</Steps>
+
+You can **Revoke** the credential at any time. The list shows when it expires and when it was last used.
+
+## Delete the organization
+
+**Who:** the Owner.
+**Where:** **Settings → Danger zone**.
+
+<Warning>
+  Deletion covers all people, requests, balances and settings. Access is cut off immediately. For **30 days** you can cancel the deletion; after that, data is erased permanently.
+</Warning>
+
+<Steps>
+  <Step title="Start the deletion">
+    Click **Delete organization**.
+  </Step>
+  <Step title="Confirm">
+    Type the organization name and click **Schedule deletion**.
+  </Step>
+</Steps>
+
+To cancel the deletion during the grace period, sign in — you see **Workspace scheduled for deletion** with a **Cancel deletion** button.
+
+<Tip>
+  Before deleting the organization, download a data export if you'll need the data. If you have an active subscription, also see [cancelling the subscription](/en/billing/subscription-and-payments).
+</Tip>
+
+## Related articles
+
+- [Privacy](/en/account/privacy)
+- [Subscription and payments](/en/billing/subscription-and-payments)

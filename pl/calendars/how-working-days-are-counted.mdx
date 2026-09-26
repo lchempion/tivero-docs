@@ -1,0 +1,55 @@
+---
+title: "Jak liczone są dni robocze"
+description: "Z czego Tivero wylicza długość wniosku: grafik pracy, potwierdzony kalendarz świąt, dni firmowe i przeniesienia ustawowe."
+---
+
+Wniosek o nieobecność liczy się w dniach roboczych, a nie w dniach kalendarzowych. Tivero ustala dni robocze osoby na podstawie kilku ustawień, które konfiguruje Twoja organizacja.
+
+## Z czego powstaje kalendarz dni roboczych osoby
+
+| Składnik | Co robi | Gdzie go ustawiasz |
+|---|---|---|
+| **Grafik pracy** | Określa, które dni tygodnia są dniami pracy (np. poniedziałek–piątek). | [Grafiki pracy](/pl/calendars/work-schedules) |
+| **Miejsce pracy** | Wskazuje, który kalendarz świąt dotyczy osoby. | [Miejsca pracy](/pl/calendars/work-locations) |
+| **Potwierdzony kalendarz świąt** | Wyłącza święta z liczenia. Obejmuje Twoje korekty: święta traktowane jak zwykły dzień i święta przeniesione. | [Kalendarz świąt](/pl/calendars/holiday-calendar) |
+| **Dni firmowe** | Dodatkowe dni wolne firmy i firmowe dni robocze. | [Dni firmowe](/pl/calendars/company-days) |
+| **Przeniesienia ustawowe** | Ustawowe przeniesienia dni pracy, jeśli organizacja je stosuje. | [Grafiki pracy](/pl/calendars/work-schedules) |
+
+<Warning>
+  Tivero liczy wnioski **tylko z kalendarza świąt potwierdzonego przez Twoją organizację**. Jeśli kalendarz dla miejsca pracy i roku nie jest potwierdzony, wnioski na ten okres są zablokowane z komunikatem „Kalendarz dni wolnych wymaga konfiguracji przez administratora.”. To celowe zabezpieczenie: Tivero nie zgaduje, które dni są u Was wolne.
+</Warning>
+
+## Kto decyduje o świętach
+
+Tivero proponuje święta od dostawcy kalendarza jako **kalendarz referencyjny**. O tym, które dni są u Was wolne, decyduje Twoja organizacja: przegląda propozycję, poprawia ją i potwierdza. Dopiero potwierdzony kalendarz jest używany do liczenia wniosków.
+
+Tivero nie gwarantuje, że propozycja jest zgodna z przepisami w każdym kraju. W niektórych krajach to, czy święto jest dniem wolnym, zależy od umów lub układów zbiorowych. Sprawdź każdą datę przed potwierdzeniem.
+
+## Sprawdź obliczenie konkretnego wniosku
+
+Otwórz wniosek. Sekcja **Szczegóły obliczenia** pokazuje, ile dni się liczy, miejsce pracy, grafik oraz każdy dzień, który się nie liczy, wraz z powodem. Osoba zatwierdzająca widzi te same informacje pod linkiem **Jak obliczono …?**.
+
+<Frame>
+  <img src="/images/pl/request-calculation.webp" alt="Zaakceptowany wniosek 9–16 listopada 2026 z sekcją Szczegóły obliczenia: 5 dni roboczych, miejsce pracy PL, grafik Pn–Pt, a jako niewliczone 11 listopada Święto oraz 14 i 15 listopada Dzień wolny wg grafiku" />
+</Frame>
+
+Możliwe powody:
+
+| Powód | Liczy się do wniosku? |
+|---|---|
+| **Weekend** | nie |
+| **Święto** | nie |
+| **Dodatkowy dzień wolny firmy** | nie |
+| **Dzień wolny wg grafiku** | nie |
+| **Ustawowy dzień wolny od pracy** | nie |
+| **Ustawowy dzień roboczy** | tak |
+| **Firmowy dzień roboczy** | tak |
+
+## Zmiany ustawień
+
+Zmiany grafiku, miejsca pracy albo kalendarza obowiązują od wybranej daty. Nie przeliczają wniosków, które zostały już złożone.
+
+## Powiązane artykuły
+
+- [Złóż wniosek o nieobecność](/pl/time-off/request-absence)
+- [Kalendarz świąt wymaga konfiguracji](/pl/troubleshooting/holiday-calendar-needs-setup)

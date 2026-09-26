@@ -1,0 +1,69 @@
+---
+title: "Absence types"
+description: "System types available from day one, custom absence types, and privacy settings for absence details."
+---
+
+**Who:** HR, Administrator, Owner.
+**Where:** the **Organization → Absence types** menu.
+
+## System types
+
+Every workspace starts with a set of system types.
+
+| Type | Category | Deducts from balance | Notes |
+|---|---|---|---|
+| Vacation leave | Employee (UoP) | yes |  |
+| On-demand leave | Employee (UoP) | yes |  |
+| Childcare leave (art. 188 KP) | Employee (UoP) | yes |  |
+| Force majeure leave | Employee (UoP) | yes |  |
+| Care leave | Employee (UoP) | yes |  |
+| Special leave | Employee (UoP) | yes |  |
+| Unpaid leave | Employee (UoP) | no |  |
+| Medical leave (L4) | Employee (UoP) | no | Private type. Doesn't require approval by default. |
+| Planned unavailability | B2B | yes, when the policy sets a limit |  |
+| Service break | B2B | yes, when the policy sets a limit |  |
+| Indisposition | B2B | yes, when the policy sets a limit |  |
+| Unpaid unavailability | B2B | no |  |
+
+The columns on the **Absence types** list show each type's unit, whether it **Deducts balance**, whether it **Requires approval**, and its visibility.
+
+For a system type, you can change only the name, privacy and active state. The category, unit and balance impact are fixed.
+
+<Note>
+  You record medical leave (L4) in Tivero as an absence. Tivero doesn't accept L4 documents — don't attach documents or medical details to a request.
+</Note>
+
+## Add a custom type
+
+Custom types are available on plans that include them. See [Plans and trial](/en/billing/plans-and-trial).
+
+<Steps>
+  <Step title="Open the form">
+    Click **Add type**.
+  </Step>
+  <Step title="Describe the type">
+    Enter the **Name** and choose the **Category** (Employee (UoP), B2B or Other) and the **Unit** (Days or Hours).
+  </Step>
+  <Step title="Set the behavior">
+    Turn **Deducts from balance**, **Requires approval**, **Details visible to everyone** and **Active** on or off.
+  </Step>
+  <Step title="Save">
+    Click **Add type**.
+  </Step>
+</Steps>
+
+A new type becomes available to people only when their [absence policy](/en/time-off/absence-policies) covers it.
+
+## Privacy of details
+
+When **Details visible to everyone** is off, the type is private. Only the employee, their manager and HR see the details. Everyone else sees just the word "Absence" in the calendar.
+
+## Turn a type off
+
+Turn off **Active** if the type shouldn't be available in new requests. Existing requests stay unchanged.
+
+## Related articles
+
+- [Key concepts](/en/time-off/key-concepts)
+- [Absence policies](/en/time-off/absence-policies)
+- [Calendar visibility](/en/calendars/absence-calendar)
