@@ -62,6 +62,31 @@ Never publish:
 The support contact is `hello@tivero.app`. Do not invent other support URLs or
 addresses.
 
+## Information architecture
+
+- The entry page offers paths by **role** (Employee, Manager, HR and admin,
+  Microsoft 365 admin). Role guides in `roles/*-guide` are lightweight hubs:
+  what the role does, first actions, where to go, common problems. They link to
+  canonical articles and never duplicate procedures.
+- Detailed content is organized by **domain** (people, time off, calendars…).
+- "Reference and concepts" reuses cross-cutting pages (`time-off/key-concepts`,
+  `roles/roles-and-permissions`). Navigation and file paths do not need to
+  match — do not move files to change a menu.
+
+## Screenshots
+
+- Only real, current Tivero UI from the public Interactive Demo (synthetic
+  data), captured per locale. Never mock, edit or AI-generate UI, and never
+  change labels inside an image.
+- No email addresses (demo addresses contain an internal id), internal ids,
+  tokens, browser chrome, DevTools or demo-only states (for example a
+  "sample calendar"). Crop to the relevant part of the app.
+- Store as optimized WebP at `images/<locale>/<scenario>.webp`, with the same
+  scenario names in every locale.
+- Embed inside the step that needs it with `<Frame><img … alt="…" /></Frame>`.
+  Alt text is localized and describes what the reader should see.
+- `check:locales` fails on a missing, orphaned, cross-locale or alt-less image.
+
 ## Localization (N locales)
 
 - Active locales are listed **only** in `i18n/locales.json`. `pl` is the
@@ -79,6 +104,9 @@ addresses.
 
 ### Adding a locale (for example `de`)
 
+(Also capture its screenshots under `images/de/`.)
+
+
 1. Add `{ "code": "de", ... }` to `i18n/locales.json`.
 2. Add `de` labels to every group in `i18n/navigation.json` and a `de` entry in
    `i18n/chrome.json`.
@@ -88,6 +116,15 @@ addresses.
 4. Run `npm run build:nav`, then `npm run check`.
 
 No script changes are needed.
+
+## Publish surface and licensing
+
+- Mintlify publishes every `.md`/`.mdx` file it finds, even outside the
+  navigation. Customer pages live only under active locale directories;
+  repository documents (`AGENTS.md`, `README.md`, `THIRD_PARTY_NOTICES.md`) and
+  tooling are listed in `.mintignore`. `check:publish` enforces this.
+- Tivero-authored content is not MIT-licensed. The Mintlify starter's MIT
+  notice lives in `THIRD_PARTY_NOTICES.md`; keep it intact.
 
 ## Commands
 
@@ -99,6 +136,7 @@ npm run check          # every gate below, in CI order
 npm run check:nav      # docs.json navigation matches i18n/
 npm run check:locales  # parity, orphans, unexpected locale dirs, link locale
 npm run check:content  # no starter residue, no placeholders
+npm run check:publish  # only locale pages can become published URLs
 npm run validate       # mint validate
 npm run links          # mint broken-links (internal links)
 npm run a11y           # mint a11y (color contrast and alt text)

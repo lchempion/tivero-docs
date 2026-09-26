@@ -77,11 +77,13 @@
             ]
           },
           {
-            "group": "Role",
+            "group": "Przewodniki według ról",
             "icon": "users-gear",
             "pages": [
-              "pl/roles/roles-and-permissions",
-              "pl/roles/manager-guide"
+              "pl/roles/employee-guide",
+              "pl/roles/manager-guide",
+              "pl/roles/hr-admin-guide",
+              "pl/roles/microsoft-365-admin-guide"
             ]
           },
           {
@@ -98,7 +100,6 @@
             "group": "Nieobecności",
             "icon": "umbrella-beach",
             "pages": [
-              "pl/time-off/key-concepts",
               "pl/time-off/absence-types",
               "pl/time-off/absence-policies",
               "pl/time-off/balances",
@@ -170,6 +171,14 @@
               "pl/troubleshooting/microsoft-365-issues",
               "pl/troubleshooting/billing-issues"
             ]
+          },
+          {
+            "group": "Pojęcia i materiały referencyjne",
+            "icon": "book",
+            "pages": [
+              "pl/time-off/key-concepts",
+              "pl/roles/roles-and-permissions"
+            ]
           }
         ]
       },
@@ -225,11 +234,13 @@
             ]
           },
           {
-            "group": "Roles",
+            "group": "Guides by role",
             "icon": "users-gear",
             "pages": [
-              "en/roles/roles-and-permissions",
-              "en/roles/manager-guide"
+              "en/roles/employee-guide",
+              "en/roles/manager-guide",
+              "en/roles/hr-admin-guide",
+              "en/roles/microsoft-365-admin-guide"
             ]
           },
           {
@@ -246,7 +257,6 @@
             "group": "Time off",
             "icon": "umbrella-beach",
             "pages": [
-              "en/time-off/key-concepts",
               "en/time-off/absence-types",
               "en/time-off/absence-policies",
               "en/time-off/balances",
@@ -317,6 +327,14 @@
               "en/troubleshooting/invitation-and-access",
               "en/troubleshooting/microsoft-365-issues",
               "en/troubleshooting/billing-issues"
+            ]
+          },
+          {
+            "group": "Reference and concepts",
+            "icon": "book",
+            "pages": [
+              "en/time-off/key-concepts",
+              "en/roles/roles-and-permissions"
             ]
           }
         ]

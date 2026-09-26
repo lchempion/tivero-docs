@@ -8,7 +8,9 @@
 //     (unexpected namespace), or a customer page sits outside any locale;
 //   - docs.json does not list exactly the active locales, in registry order;
 //   - a page has no title or description in its frontmatter;
-//   - a page links to another locale or to an unprefixed internal path.
+//   - a page links to another locale or to an unprefixed internal path;
+//   - a screenshot is missing, unreferenced, from another locale, has no alt
+//     text, or has no variant in every locale.
 //
 // Adding a language requires no change here.
 
@@ -123,7 +125,43 @@ for (const code of codes) {
   }
 }
 
-// 4. docs.json lists exactly the active locales, in registry order.
+// 4. Screenshots: localized, referenced, present, described, and in parity.
+const referenced = new Set();
+for (const code of codes) {
+  for (const file of mdxFiles(join(ROOT, code))) {
+    const rel = relative(ROOT, file);
+    const source = readFileSync(file, "utf8");
+    for (const m of source.matchAll(/<img\b[^>]*>/g)) {
+      const tag = m[0];
+      const src = tag.match(/src="([^"]+)"/)?.[1] ?? "";
+      const alt = tag.match(/alt="([^"]*)"/)?.[1] ?? "";
+      if (!alt.trim()) errors.push(`${rel}: image without alt text (${src})`);
+      if (!src.startsWith(`/images/${code}/`)) {
+        errors.push(`${rel}: image must come from /images/${code}/ (${src})`);
+      }
+      if (!existsSync(join(ROOT, src))) errors.push(`${rel}: missing image ${src}`);
+      referenced.add(src.slice(1));
+    }
+  }
+}
+const imageSets = codes.map((code) => {
+  const dir = join(ROOT, "images", code);
+  const names = existsSync(dir) ? readdirSync(dir).sort() : [];
+  for (const name of names) {
+    if (!referenced.has(`images/${code}/${name}`)) {
+      errors.push(`orphan image (not referenced): images/${code}/${name}`);
+    }
+  }
+  return names.join(",");
+});
+if (new Set(imageSets).size > 1) {
+  errors.push("image sets differ between locales — every screenshot needs a variant per locale");
+}
+for (const name of readdirSync(join(ROOT, "images")).filter((n) => existsSync(join(ROOT, "images", n)) && statSync(join(ROOT, "images", n)).isDirectory())) {
+  if (!codes.includes(name)) errors.push(`images/${name}/ is not an active locale`);
+}
+
+// 5. docs.json lists exactly the active locales, in registry order.
 const docs = readJson("docs.json");
 const configured = (docs.navigation?.languages ?? []).map((l) => l.language);
 if (JSON.stringify(configured) !== JSON.stringify(codes)) {
@@ -138,5 +176,5 @@ if (errors.length > 0) {
   process.exit(1);
 }
 console.log(
-  `locale parity OK: ${ids.length} logical articles × ${codes.length} locales (${codes.join(", ")}) = ${pageCount} pages; reference ${registry.reference}`,
+  `locale parity OK: ${ids.length} logical articles × ${codes.length} locales (${codes.join(", ")}) = ${pageCount} pages, ${referenced.size} images; reference ${registry.reference}`,
 );

@@ -1,12 +1,24 @@
 # Mintlify automatically ignores these files and directories:
 # .git, .github, .claude, .agents, .idea, node_modules,
 # README.md, LICENSE.md, CHANGELOG.md, CONTRIBUTING.md
+#
+# Customer pages live ONLY under the active locale directories (see
+# i18n/locales.json). Everything below is repository-only and must never be
+# published. `npm run check:publish` enforces this.
 
 # Draft content
 drafts/
 *.draft.mdx
 
-# Repository tooling, not customer pages
+# Repository documents (listed explicitly even where Mintlify ignores them)
 AGENTS.md
+README.md
+THIRD_PARTY_NOTICES.md
+LICENSE
+/*.md
+
+# Repository tooling and configuration sources
 scripts/
 i18n/
+package.json
+package-lock.json

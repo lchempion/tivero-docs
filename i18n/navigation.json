@@ -19,12 +19,14 @@
       "id": "roles",
       "icon": "users-gear",
       "label": {
-        "pl": "Role",
-        "en": "Roles"
+        "pl": "Przewodniki według ról",
+        "en": "Guides by role"
       },
       "pages": [
-        "roles/roles-and-permissions",
-        "roles/manager-guide"
+        "roles/employee-guide",
+        "roles/manager-guide",
+        "roles/hr-admin-guide",
+        "roles/microsoft-365-admin-guide"
       ]
     },
     {
@@ -49,7 +51,6 @@
         "en": "Time off"
       },
       "pages": [
-        "time-off/key-concepts",
         "time-off/absence-types",
         "time-off/absence-policies",
         "time-off/balances",
@@ -144,6 +145,18 @@
         "troubleshooting/invitation-and-access",
         "troubleshooting/microsoft-365-issues",
         "troubleshooting/billing-issues"
+      ]
+    },
+    {
+      "id": "reference",
+      "icon": "book",
+      "label": {
+        "pl": "Pojęcia i materiały referencyjne",
+        "en": "Reference and concepts"
+      },
+      "pages": [
+        "time-off/key-concepts",
+        "roles/roles-and-permissions"
       ]
     }
   ]

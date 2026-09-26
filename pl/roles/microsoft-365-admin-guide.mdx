@@ -1,0 +1,66 @@
+---
+title: "Przewodnik administratora Microsoft 365"
+description: "Wymagania, zgody i kolejność wdrożenia integracji Tivero z Microsoft 365: katalog osób, kalendarz Outlook i Microsoft Teams."
+---
+
+Ten przewodnik jest dla osoby, która łączy Tivero z Microsoft 365 — zwykle Administratora w Tivero razem z administratorem IT. Szczegółowe instrukcje są w artykułach, do których prowadzą linki.
+
+## Wymagania
+
+| Kto / co | Po co |
+|---|---|
+| **Administrator lub Właściciel w Tivero** | Tylko te role widzą **Integracje**. |
+| **Administrator Microsoft 365** | Udziela zgód dla Tivero (połączenie, kalendarz, Teams). |
+| **Administrator Teams** | Publikuje aplikację Tivero w katalogu aplikacji organizacji. |
+| **Plan Tivero** | Kalendarz Outlook — od planu Start. Import i synchronizacja osób oraz Teams — plan Growth lub Enterprise (albo okres próbny). |
+
+## Kolejność wdrożenia
+
+<Steps>
+  <Step title="Połącz Microsoft 365">
+    W **Integracje → Microsoft 365** kliknij **Połącz** albo **Przekaż do IT**, jeśli zgody udziela ktoś inny. Zobacz [Połącz Microsoft 365](/pl/microsoft-365/connect).
+
+    <Frame>
+      <img src="/images/pl/m365-not-connected.webp" alt="Karta Microsoft 365 ze statusem Niepołączono oraz przyciskami Połącz i Przekaż do IT" />
+    </Frame>
+  </Step>
+  <Step title="Zsynchronizuj osoby">
+    Najpierw **Podgląd zmian**, potem **Zastosuj**. Kalendarz i Teams działają dla osób zsynchronizowanych z katalogiem. Zobacz [Synchronizacja osób z Entra ID](/pl/microsoft-365/directory-sync).
+  </Step>
+  <Step title="Włącz kalendarz Outlook">
+    **Włącz synchronizację** i udziel zgody administratora w Microsoft. Zobacz [Kalendarz Outlook](/pl/microsoft-365/outlook-calendar).
+  </Step>
+  <Step title="Włącz Microsoft Teams">
+    Udziel zgody administratora, pobierz pakiet aplikacji, opublikuj go w Teams Admin Center, włącz **Powiadomienia Teams** i skonfiguruj zakładki. Zobacz [Microsoft Teams](/pl/microsoft-365/teams).
+  </Step>
+</Steps>
+
+## Zgody, o które poprosi Microsoft
+
+| Kiedy | Kto akceptuje | Co umożliwia |
+|---|---|---|
+| **Połącz** / link **Przekaż do IT** | administrator Microsoft 365 | odczyt katalogu osób |
+| **Włącz synchronizację** (Outlook) → **Kontynuuj z Microsoft** | administrator Microsoft 365 | tworzenie i usuwanie wydarzeń nieobecności w kalendarzach |
+| **Udziel zgody administratora** (Teams) | administrator Microsoft 365 | odczyt katalogu aplikacji Teams i instalację wyłącznie aplikacji Tivero |
+| **Skonfiguruj zakładki w Teams** | administrator organizacji | logowanie pracowników w zakładkach Tivero w Teams |
+
+Tivero tylko odczytuje katalog. Nigdy nic w nim nie zmienia.
+
+## Najczęstsze sprawy
+
+| Chcesz… | Przejdź do |
+|---|---|
+| ustawić codzienną synchronizację | [Synchronizacja osób z Entra ID](/pl/microsoft-365/directory-sync) → **Automatyczna synchronizacja** |
+| przejąć przełożonych z katalogu | [Synchronizacja osób z Entra ID](/pl/microsoft-365/directory-sync) → **Synchronizacja managerów** |
+| zaktualizować aplikację w Teams | [Microsoft Teams](/pl/microsoft-365/teams) → **Pakiet aplikacji Teams** |
+| odłączyć integrację | [Odłączanie integracji](/pl/microsoft-365/disconnect) |
+
+## Najczęstsze problemy
+
+- [Problemy z Microsoft 365](/pl/troubleshooting/microsoft-365-issues) — połączenie, synchronizacja, Outlook, Teams.
+- [Zaproszenia i dostęp](/pl/troubleshooting/invitation-and-access) — osoby z katalogu nie dostają zaproszeń automatycznie.
+
+## Powiązane artykuły
+
+- [Microsoft 365 — przegląd](/pl/microsoft-365/overview)
+- [Plany i okres próbny](/pl/billing/plans-and-trial)

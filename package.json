@@ -15,7 +15,8 @@
     "validate": "mint validate",
     "links": "mint broken-links",
     "a11y": "mint a11y",
-    "check": "npm run check:nav && npm run check:locales && npm run check:content && npm run validate && npm run links && npm run a11y"
+    "check": "npm run check:nav && npm run check:locales && npm run check:content && npm run check:publish && npm run validate && npm run links && npm run a11y",
+    "check:publish": "node scripts/check-publish-surface.mjs"
   },
   "devDependencies": {
     "mint": "4.2.939"

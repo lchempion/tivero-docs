@@ -1,3 +1,19 @@
+# Third-party notices
+
+This repository was created from the Mintlify documentation starter template.
+Material that originates from that template — for example parts of the `docs.json` configuration structure and the
+`.mintignore` header — is subject to the Mintlify MIT License reproduced below.
+
+This notice applies only to the Mintlify starter-derived material. It does not
+apply to the documentation content, images, logos or other materials authored by
+Tivero, which are not licensed under the MIT License (see README.md).
+
+The Mintlify CLI (`mint`), installed as a development dependency, is distributed
+under its own license terms in the npm registry.
+
+## Mintlify starter template
+
+```text
 MIT License
 
 Copyright (c) 2026 Mintlify
@@ -19,3 +35,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```

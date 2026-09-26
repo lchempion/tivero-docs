@@ -15,6 +15,7 @@ i18n/navigation.json    logical articles, groups and per-locale group labels
 i18n/chrome.json        per-locale navbar and footer text
 pl/<group>/<slug>.mdx   Polish pages (reference locale)
 en/<group>/<slug>.mdx   English pages (same slugs)
+images/<locale>/        localized screenshots from the Tivero demo
 scripts/                navigation generator and CI checks
 ```
 
@@ -50,3 +51,10 @@ repository.
 ## Contact
 
 hello@tivero.app
+
+## Copyright
+
+Copyright © 2026 Tivero. All rights reserved.
+
+Third-party materials remain subject to their respective licenses, listed in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
