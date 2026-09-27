@@ -16,6 +16,23 @@ https://tivero.app). Built with Mintlify; configuration lives in `docs.json`.
   ellipsis: **Potwierdź kalendarz na …**. Never put curly-brace placeholders in
   MDX text — MDX evaluates them as JavaScript.
 
+## Product ↔ Help Center synchronization
+
+The app (`lchempion/tivero`) is the source of truth; this site describes it.
+
+- When a docs change describes UI labels, routes/navigation, workflows,
+  permissions, configuration, screenshots or troubleshooting, verify it against
+  the CURRENT app first. Never let an instruction or a screenshot describe an
+  older UI.
+- Every customer-facing app change is classified in its PR (`DOCS_IMPACT`,
+  `ONBOARDING_CHECKLIST_IMPACT`, see the app's `CLAUDE.md`). An
+  `UPDATE_REQUIRED` there is closed only by the matching change here.
+- Article paths are a contract: the app links to specific articles from its
+  setup checklist and "Learn more" links (`src/lib/help-center.ts`). Keep
+  paths stable — change navigation in `i18n/`/`docs.json`, not the path — and
+  if a path must change, change the app registry in the same programme.
+- Applies to every locale this site publishes, not only `pl`/`en`.
+
 ## Terminology
 
 These four concepts are different and must never be used interchangeably:
