@@ -1,12 +1,12 @@
 ---
 title: "Add and invite people"
-description: "Add a person to the organization, give them a team, supervisor and policy, then send the invitation."
+description: "Add a person to the organization, review the settings Tivero prepares automatically, and send the invitation right away."
 ---
 
 **Who:** HR, Administrator, Owner.
 **Prerequisites:** at least one [absence policy](/en/time-off/absence-policies), if you want to assign it right away.
 
-Adding a person and inviting them are two separate steps. First you create the person's profile, then you send the invitation when everything is ready.
+When you add a person, you type only their first name, last name and email address. Tivero prepares the rest of the setup from your company's settings and shows it to you before anything is saved. By default, the person is invited as soon as they are added.
 
 ## Add a person
 
@@ -14,20 +14,31 @@ Adding a person and inviting them are two separate steps. First you create the p
   <Step title="Open the dialog">
     Go to **People** and click **Add person**.
   </Step>
-  <Step title="Step 1: Details & access">
-    Enter the first name, last name and email address. Choose the **Collaboration form** (Employment contract, B2B collaboration, Mandate contract, Other collaboration form), **Team**, **Supervisor** and **Access role**.
+  <Step title="Enter the person's details">
+    Enter the **First name**, **Last name** and **Email**.
 
     <Frame>
-      <img src="/images/en/add-person.webp" alt="The Add person dialog, step 1 of 2 Details and access: First name, Last name, Email, Collaboration form, Access role, Team and Supervisor fields" />
+      <img src="/images/en/add-person.webp" alt="The Add person dialog: First name, Last name and Email fields, the employment type choice, and the We'll set up automatically section with employment type, team, manager, policy, starting balance, role and invitation, followed by Change settings" />
     </Frame>
   </Step>
-  <Step title="Step 2: Policy & balance">
-    Choose the **Policy**. If the policy uses a balance, choose **Set balance now** and enter the opening balance, or **Set balance later**.
+  <Step title="Answer the questions, if any">
+    Tivero asks only about what it can't safely decide on its own:
+
+    - **This person's employment type** — when your company works with people on different employment types, or the type isn't known. No answer is preselected.
+    - **Planned unavailability allowance** — for a person on B2B collaboration, when their policy leaves the allowance to be set per person. Choose **No limit**, or **Limit** and enter the **Number of days**. No answer is preselected.
+  </Step>
+  <Step title="Review We'll set up automatically">
+    The section shows what Tivero will set up: **Employment type**, **Team**, **Manager**, **Policy**, **Starting balance**, **Role** (Employee by default) and **Invitation**. **To be chosen** means you need to pick that value in the settings.
+  </Step>
+  <Step title="Change settings if needed">
+    Click **Change settings** to choose other values: **Collaboration form**, **Access role** (for Administrators and Owners), **Team**, **Supervisor**, **Policy**, **Opening balance** with the **Leave year** field, and **Send the invitation now**.
   </Step>
   <Step title="Save">
-    Click **Add person**. The person appears on the list with the **Imported** status.
+    Click **Add and invite**. If you turn off **Send the invitation now**, the button is called **Add**.
   </Step>
 </Steps>
+
+After saving, the person appears on the **People** list. If the invitation was sent, their status is **Invited**. If they were added without an invitation, their status is **Imported**.
 
 <Warning>
   The email address is the account key and can't be edited later. Check it before you save.
@@ -37,9 +48,24 @@ Adding a person and inviting them are two separate steps. First you create the p
   The **Supervisor** defines the reporting line and, by default, approves the person's requests. The **Access role** defines permissions in Tivero. The two are independent.
 </Note>
 
-If you choose **Set balance later**, the person can't file balance-deducting requests until the opening balance is set. The **People** list shows a banner with the number of people who need an opening balance.
+## Starting balance
 
-## Send the invitation
+If the policy uses a balance, Tivero suggests a starting balance equal to the policy's full allowance for the current leave year. Change it if the employee already used part of their leave before starting with Tivero. Tivero doesn't prorate the allowance — when the person starts mid-year, the dialog reminds you: **This person starts mid-year — check the allowance.**
+
+If Tivero can't safely suggest an amount, the field is empty and you need to fill it in.
+
+### B2B collaboration and No limit
+
+“No limit” applies to the allowance. Planned unavailability may still be accounted against a balance, so Tivero can require a starting balance. Tivero doesn't suggest an amount for **No limit** — enter it in the **Opening balance** field.
+
+## If something doesn't work
+
+- **The invitation wasn't sent.** Tivero tells you the person was added, but the invitation could not be sent. The person and their setup are saved. Click **Send again** — don't add the person a second time.
+- **The setup wasn't finished.** If, for example, the policy or the balance couldn't be set, Tivero tells you which part is missing. The person is added, but no invitation is sent. Click **Open profile**, complete the missing settings, then send the invitation.
+
+## Send the invitation later
+
+This is how you invite a person added without an invitation, or imported from a file:
 
 <Steps>
   <Step title="Open the person">
@@ -55,7 +81,7 @@ If you choose **Set balance later**, the person can't file balance-deducting req
 
 ## Seat cost
 
-On a paid plan you pay for active people. If an invitation increases the number of paid seats, Tivero shows **This will increase the bill** with how much you pay and when. During the free trial you pay nothing. Only the Owner or an Administrator can approve the cost. Details: [Subscription and payments](/en/billing/subscription-and-payments).
+On a paid plan you pay for active people. If adding or inviting a person increases the number of paid seats, Tivero shows **This will increase the bill** before saving, with how much you pay and when. During the free trial you pay nothing. Only the Owner or an Administrator can approve the cost. Details: [Subscription and payments](/en/billing/subscription-and-payments).
 
 ## Person statuses
 

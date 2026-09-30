@@ -1,12 +1,12 @@
 ---
 title: "Dodawanie i zapraszanie osób"
-description: "Dodaj osobę do organizacji, przypisz jej zespół, przełożonego i zasadę, a potem wyślij zaproszenie."
+description: "Dodaj osobę do organizacji, sprawdź ustawienia, które Tivero przygotuje automatycznie, i od razu wyślij zaproszenie."
 ---
 
 **Kto:** Kadry (HR), Administrator, Właściciel.
 **Wymagania:** przynajmniej jedna [zasada nieobecności](/pl/time-off/absence-policies), jeśli chcesz ją od razu przypisać.
 
-Dodanie osoby i wysłanie zaproszenia to dwa osobne kroki. Najpierw tworzysz profil osoby, a zaproszenie wysyłasz, gdy wszystko jest gotowe.
+Dodając osobę, wpisujesz tylko jej imię, nazwisko i adres e-mail. Resztę konfiguracji Tivero przygotowuje na podstawie ustawień firmy i pokazuje ją, zanim cokolwiek zapiszesz. Domyślnie osoba dostaje zaproszenie od razu po dodaniu.
 
 ## Dodaj osobę
 
@@ -14,20 +14,31 @@ Dodanie osoby i wysłanie zaproszenia to dwa osobne kroki. Najpierw tworzysz pro
   <Step title="Otwórz okno dodawania">
     Przejdź do **Osoby** i kliknij **Dodaj osobę**.
   </Step>
-  <Step title="Krok 1: Dane i dostęp">
-    Wpisz imię, nazwisko i adres e-mail. Wybierz **Forma współpracy** (Umowa o pracę, Współpraca B2B, Umowa zlecenie, Inna forma współpracy), **Zespół**, **Przełożony** i **Rola dostępu**.
+  <Step title="Wpisz dane osoby">
+    Wpisz **Imię**, **Nazwisko** i **Email**.
 
     <Frame>
-      <img src="/images/pl/add-person.webp" alt="Okno Dodaj osobę, krok 1 z 2 Dane i dostęp: pola Imię, Nazwisko, Email, Forma współpracy, Rola dostępu, Zespół i Przełożony" />
+      <img src="/images/pl/add-person.webp" alt="Okno Dodaj osobę: pola Imię, Nazwisko i Email, wybór formy współpracy oraz sekcja Ustawimy automatycznie z formą współpracy, zespołem, przełożonym, zasadą, saldem na start, rolą i zaproszeniem, a pod nią Zmień ustawienia" />
     </Frame>
   </Step>
-  <Step title="Krok 2: Zasada i saldo">
-    W polu **Zasada** wybierz zasadę nieobecności. Jeśli zasada korzysta z salda, wybierz **Ustaw saldo teraz** i wpisz saldo początkowe albo **Ustawię saldo później**.
+  <Step title="Odpowiedz na pytania, jeśli się pojawią">
+    Tivero pyta tylko o to, czego nie może bezpiecznie ustalić samo:
+
+    - **Forma współpracy tej osoby** — gdy firma współpracuje z osobami na różnych formach współpracy albo forma nie jest znana. Żadna odpowiedź nie jest zaznaczona z góry.
+    - **Wymiar planowanej niedostępności** — dla osoby na współpracy B2B, gdy jej zasada zostawia wymiar do ustalenia indywidualnie. Wybierz **Bez limitu** albo **Limit** i wpisz **Liczba dni**. Żadna odpowiedź nie jest zaznaczona z góry.
+  </Step>
+  <Step title="Sprawdź sekcję Ustawimy automatycznie">
+    Sekcja pokazuje, co Tivero ustawi: **Forma współpracy**, **Zespół**, **Przełożony**, **Zasada**, **Saldo na start**, **Rola** (domyślnie Pracownik) i **Zaproszenie**. Wartość **Do wybrania** oznacza, że tę wartość trzeba wybrać w ustawieniach.
+  </Step>
+  <Step title="Zmień ustawienia, jeśli trzeba">
+    Kliknij **Zmień ustawienia**, aby wybrać inne wartości: **Forma współpracy**, **Rola dostępu** (dla Administratora i Właściciela), **Zespół**, **Przełożony**, **Zasada**, **Saldo początkowe** z polem **Rok rozliczeniowy** oraz **Wyślij zaproszenie teraz**.
   </Step>
   <Step title="Zapisz">
-    Kliknij **Dodaj osobę**. Osoba pojawi się na liście ze statusem **Zaimportowany**.
+    Kliknij **Dodaj i zaproś**. Jeśli wyłączysz **Wyślij zaproszenie teraz**, przycisk ma nazwę **Dodaj**.
   </Step>
 </Steps>
+
+Po zapisaniu osoba pojawia się na liście **Osoby**. Jeśli zaproszenie zostało wysłane, ma status **Zaproszony**. Jeśli osoba została dodana bez zaproszenia, ma status **Zaimportowany**.
 
 <Warning>
   Adres e-mail jest kluczem konta i nie da się go później edytować. Sprawdź go przed zapisaniem.
@@ -37,9 +48,24 @@ Dodanie osoby i wysłanie zaproszenia to dwa osobne kroki. Najpierw tworzysz pro
   **Przełożony** określa strukturę raportowania i domyślnie to on akceptuje wnioski. **Rola dostępu** określa uprawnienia w Tivero. To dwie niezależne rzeczy.
 </Note>
 
-Jeśli wybierzesz **Ustawię saldo później**, osoba nie złoży wniosków rozliczanych z salda, dopóki saldo początkowe nie zostanie ustawione. Lista **Osoby** pokazuje baner z liczbą osób, które wymagają ustawienia salda.
+## Saldo na start
 
-## Wyślij zaproszenie
+Jeśli zasada korzysta z salda, Tivero podpowiada saldo na start równe pełnemu wymiarowi zasady w bieżącym roku rozliczeniowym. Zmień je, jeśli pracownik wykorzystał już część urlopu przed rozpoczęciem pracy z Tivero. Tivero nie przelicza wymiaru proporcjonalnie — gdy osoba zaczyna w trakcie roku, okno przypomina: **Osoba zaczyna w trakcie roku — sprawdź wymiar.**
+
+Jeśli Tivero nie może bezpiecznie podpowiedzieć kwoty, pole jest puste i trzeba je wypełnić.
+
+### Współpraca B2B i opcja Bez limitu
+
+„Bez limitu” dotyczy wymiaru dni. Planowana niedostępność nadal może być rozliczana z salda, dlatego Tivero może wymagać ustawienia salda na start. Przy opcji **Bez limitu** Tivero nie podpowiada kwoty — wpisz ją w polu **Saldo początkowe**.
+
+## Gdy coś się nie uda
+
+- **Zaproszenie nie zostało wysłane.** Tivero pokaże komunikat, że osoba została dodana, ale zaproszenia nie udało się wysłać. Osoba i jej konfiguracja zostają zapisane. Kliknij **Wyślij ponownie** — nie dodawaj osoby jeszcze raz.
+- **Konfiguracja nie została dokończona.** Jeśli nie udało się ustawić na przykład zasady albo salda, Tivero napisze, której części brakuje. Osoba zostaje dodana, ale zaproszenie nie jest wysyłane. Kliknij **Otwórz profil**, uzupełnij brakujące ustawienia, a potem wyślij zaproszenie.
+
+## Wyślij zaproszenie później
+
+Tak zaprosisz osobę dodaną bez zaproszenia albo zaimportowaną z pliku:
 
 <Steps>
   <Step title="Otwórz osobę">
@@ -55,7 +81,7 @@ Jeśli wybierzesz **Ustawię saldo później**, osoba nie złoży wniosków rozl
 
 ## Koszt miejsca
 
-W płatnym planie opłacasz aktywne osoby. Jeśli zaproszenie zwiększy liczbę opłacanych miejsc, Tivero pokaże okno **To zwiększy rachunek** z informacją, ile i kiedy zapłacisz. W okresie próbnym nic nie płacisz. Koszt może zatwierdzić tylko Właściciel lub Administrator. Szczegóły: [Subskrypcja i płatności](/pl/billing/subscription-and-payments).
+W płatnym planie opłacasz aktywne osoby. Jeśli dodanie lub zaproszenie osoby zwiększy liczbę opłacanych miejsc, Tivero przed zapisaniem pokaże okno **To zwiększy rachunek** z informacją, ile i kiedy zapłacisz. W okresie próbnym nic nie płacisz. Koszt może zatwierdzić tylko Właściciel lub Administrator. Szczegóły: [Subskrypcja i płatności](/pl/billing/subscription-and-payments).
 
 ## Statusy osób
 
