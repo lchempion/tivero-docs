@@ -1,14 +1,34 @@
 ---
 title: "Holiday calendar"
-description: "Review the suggested holidays for a work location and year, correct them and confirm the calendar Tivero uses to count requests."
+description: "Check whether your company's public holidays are managed by Tivero or confirmed by your organization, and how to correct them."
 ---
 
-Tivero suggests holidays from its calendar provider. You review them for each work location and year, correct anything that differs for you, and confirm. Leave is calculated **only from a confirmed calendar**.
+Public holidays remove days from the request count. The holiday calendar works in one of two modes:
+
+| Mode | Who looks after the calendar | When |
+|---|---|---|
+| **Managed by Tivero** | Tivero prepares a reviewed calendar and keeps it up to date automatically. You don't need to confirm it. | Companies in Poland that set up Tivero when creating the workspace. |
+| **Confirmed by your organization** | Your organization reviews the suggestion, corrects it and confirms it for each work location and year. | Other workspaces, including companies in other countries. |
 
 **Who:** HR, Administrator, Owner.
 **Where:** **Settings → Work time → Holidays**.
 
-## Confirm the calendar
+## Calendar managed by Tivero
+
+At the top of the card you see **Public holidays — … · Managed by Tivero ✓**. Choose a **Year** to see that year's holidays.
+
+- The calendar covers this year and next. There is no confirm button — Tivero keeps it up to date automatically.
+- If a year shows **"Tivero has not published the … calendar yet. There is nothing to confirm — it will appear automatically."**, the calendar for that year is still being prepared. Requests for that year can be submitted once it appears.
+- Your corrections keep working: you can treat a holiday as a normal day or move it (see below), and add [company days](/en/calendars/company-days).
+- When Tivero updates the calendar, the card tells you whether any request was calculated with the previous version. Those requests stay unchanged.
+
+Tivero doesn't guarantee that the calendar is legally correct in every situation. If a day is different for you, use the corrections below.
+
+## Calendar confirmed by your organization
+
+In this mode, Tivero suggests holidays from its calendar provider. You review them for each work location and year, correct anything that differs for you, and confirm. Leave is calculated **only from a confirmed calendar**.
+
+### Confirm the calendar
 
 <Steps>
   <Step title="Choose the work location and year">
@@ -31,13 +51,20 @@ Tivero suggests holidays from its calendar provider. You review them for each wo
   In some countries, whether a holiday is a day off depends on contracts or collective agreements. Tivero shows a note when this applies. The provider's suggestion is not legal advice — your organization decides which calendar applies.
 </Warning>
 
-## Calendar statuses
+### Calendar statuses
 
 | Status | What it means | Are requests counted? |
 |---|---|---|
 | **Confirmed** | Your organization confirmed the calendar. | yes |
 | **Needs confirmation** | There is a suggestion, but nobody has confirmed it yet. | no — requests are blocked |
 | **No data** | Tivero doesn't have a calendar for this work location and year yet. | no — requests are blocked |
+
+### Update from the provider
+
+If the provider changes a calendar you've already confirmed, Tivero shows a **A calendar update from the provider is available** card listing added and removed holidays.
+
+- Until you accept it, leave is calculated from the calendar you confirmed.
+- Click **Accept update** to apply it. Your corrections stay.
 
 ## Correct a holiday
 
@@ -47,13 +74,6 @@ Tivero suggests holidays from its calendar provider. You review them for each wo
 | **Move holiday** | The holiday becomes a normal day, and the date you choose (**Day off instead**) becomes a day off at this work location. Enter the **Name of the day off**. |
 
 Your company days off and working days for the year show under **Your company days off and working days this year**. You add them in [Company days](/en/calendars/company-days).
-
-## Update from the provider
-
-If the provider changes a calendar you've already confirmed, Tivero shows a **A calendar update from the provider is available** card listing added and removed holidays.
-
-- Until you accept it, leave is calculated from the calendar you confirmed.
-- Click **Accept update** to apply it. Your corrections stay.
 
 ## Each person's calendar
 
