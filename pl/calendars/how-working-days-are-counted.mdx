@@ -1,6 +1,6 @@
 ---
 title: "Jak liczone są dni robocze"
-description: "Z czego Tivero wylicza długość wniosku: grafik pracy, potwierdzony kalendarz świąt, dni firmowe i przeniesienia ustawowe."
+description: "Z czego Tivero wylicza długość wniosku: grafik pracy, kalendarz świąt, dni firmowe i przeniesienia ustawowe."
 ---
 
 Wniosek o nieobecność liczy się w dniach roboczych, a nie w dniach kalendarzowych. Tivero ustala dni robocze osoby na podstawie kilku ustawień, które konfiguruje Twoja organizacja.
@@ -11,26 +11,29 @@ Wniosek o nieobecność liczy się w dniach roboczych, a nie w dniach kalendarzo
 |---|---|---|
 | **Grafik pracy** | Określa, które dni tygodnia są dniami pracy (np. poniedziałek–piątek). | [Grafiki pracy](/pl/calendars/work-schedules) |
 | **Miejsce pracy** | Wskazuje, który kalendarz świąt dotyczy osoby. | [Miejsca pracy](/pl/calendars/work-locations) |
-| **Potwierdzony kalendarz świąt** | Wyłącza święta z liczenia. Obejmuje Twoje korekty: święta traktowane jak zwykły dzień i święta przeniesione. | [Kalendarz świąt](/pl/calendars/holiday-calendar) |
+| **Kalendarz świąt** | Wyłącza święta z liczenia. Obejmuje Twoje korekty: święta traktowane jak zwykły dzień i święta przeniesione. | [Kalendarz świąt](/pl/calendars/holiday-calendar) |
 | **Dni firmowe** | Dodatkowe dni wolne firmy i firmowe dni robocze. | [Dni firmowe](/pl/calendars/company-days) |
 | **Przeniesienia ustawowe** | Ustawowe przeniesienia dni pracy, jeśli organizacja je stosuje. | [Grafiki pracy](/pl/calendars/work-schedules) |
 
 <Warning>
-  Tivero liczy wnioski **tylko z kalendarza świąt potwierdzonego przez Twoją organizację**. Jeśli kalendarz dla miejsca pracy i roku nie jest potwierdzony, wnioski na ten okres są zablokowane z komunikatem „Kalendarz dni wolnych wymaga konfiguracji przez administratora.”. To celowe zabezpieczenie: Tivero nie zgaduje, które dni są u Was wolne.
+  Tivero liczy wnioski tylko z **aktywnego kalendarza świąt** dla miejsca pracy i roku — nie zgaduje, które dni są u Was wolne. Jeśli takiego kalendarza jeszcze nie ma, wnioski na ten okres są zablokowane z komunikatem z przyczyną (zobacz [Kalendarz świąt wymaga konfiguracji](/pl/troubleshooting/holiday-calendar-needs-setup)).
 </Warning>
 
 ## Kto decyduje o świętach
 
-Tivero proponuje święta od dostawcy kalendarza jako **kalendarz referencyjny**. O tym, które dni są u Was wolne, decyduje Twoja organizacja: przegląda propozycję, poprawia ją i potwierdza. Dopiero potwierdzony kalendarz jest używany do liczenia wniosków.
+To zależy od trybu kalendarza (zobacz [Kalendarz świąt](/pl/calendars/holiday-calendar)):
 
-Tivero nie gwarantuje, że propozycja jest zgodna z przepisami w każdym kraju. W niektórych krajach to, czy święto jest dniem wolnym, zależy od umów lub układów zbiorowych. Sprawdź każdą datę przed potwierdzeniem.
+- **Zarządzane przez Tivero** — Tivero używa przejrzanego przez siebie kalendarza i aktualizuje go automatycznie. Twoja organizacja nie musi go potwierdzać, ale może poprawić pojedyncze święta.
+- **Potwierdzany przez organizację** — Tivero proponuje święta od dostawcy kalendarza jako **kalendarz referencyjny**. Twoja organizacja przegląda propozycję, poprawia ją i potwierdza. Dopiero potwierdzony kalendarz jest używany do liczenia wniosków.
+
+Tivero nie gwarantuje, że kalendarz jest zgodny z przepisami w każdym kraju i każdej sytuacji. W niektórych krajach to, czy święto jest dniem wolnym, zależy od umów lub układów zbiorowych. Jeśli u Was jest inaczej, popraw święto w kalendarzu.
 
 ## Sprawdź obliczenie konkretnego wniosku
 
 Otwórz wniosek. Sekcja **Szczegóły obliczenia** pokazuje, ile dni się liczy, miejsce pracy, grafik oraz każdy dzień, który się nie liczy, wraz z powodem. Osoba zatwierdzająca widzi te same informacje pod linkiem **Jak obliczono …?**.
 
 <Frame>
-  <img src="/images/pl/request-calculation.webp" alt="Zaakceptowany wniosek 9–16 listopada 2026 z sekcją Szczegóły obliczenia: 5 dni roboczych, miejsce pracy PL, grafik Pn–Pt, a jako niewliczone 11 listopada Święto oraz 14 i 15 listopada Dzień wolny wg grafiku" />
+  <img src="/images/pl/request-calculation.webp" alt="Zaakceptowany wniosek 9–12 listopada 2026 z sekcją Szczegóły obliczenia: 3 dni robocze, miejsce pracy PL, grafik Pn–Pt, a jako niewliczony 11 listopada — Święto, Narodowe Święto Niepodległości" />
 </Frame>
 
 Możliwe powody:
@@ -47,7 +50,7 @@ Możliwe powody:
 
 ## Zmiany ustawień
 
-Zmiany grafiku, miejsca pracy albo kalendarza obowiązują od wybranej daty. Nie przeliczają wniosków, które zostały już złożone.
+Zmiany grafiku, miejsca pracy albo kalendarza obowiązują od wybranej daty. Nie przeliczają wniosków, które zostały już złożone — dotyczy to także aktualizacji kalendarza zarządzanego przez Tivero.
 
 ## Powiązane artykuły
 
