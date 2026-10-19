@@ -33,17 +33,17 @@ Email address, first name, last name, display name, job title, department, accou
 
 | Setting | What it does |
 |---|---|
-| **Automatic synchronization** | Daily import and field updates. Deactivation candidates still require manual confirmation. |
+| **Automatic synchronization** | Automatic directory synchronization **is not available at the moment**. To fetch current people data, use **Sync now**. |
 | **Manager synchronization** | Sets the supervisor from the directory, which feeds the [approval route](/en/time-off/approval-process). Never clears an existing supervisor. |
-| **Automatic offboarding** | Deactivates people who have gone from the directory or have been disabled for longer than a set number of days. **Off by default.** |
+| **Automatic offboarding** | **Not available at the moment.** Tivero doesn't deactivate anyone automatically — you deactivate deactivation candidates manually. |
 
 ## Deactivation candidates
 
-People who have gone from the directory or whose account is disabled end up in **Deactivation candidates**. They are not deactivated automatically — HR deactivates them manually on the **People** list, unless you turn on automatic offboarding.
+People who have gone from the directory or whose account is disabled end up in **Deactivation candidates**. They are not deactivated automatically — HR deactivates them manually on the **People** list.
 
-<Warning>
-  Automatic offboarding deactivates people without a human in the loop. Turn it on only when import and matching work correctly on your data. Tivero requires several consecutive complete syncs on the same scope before it lets you turn it on. It also has a circuit breaker: on a sudden spike of candidates it deactivates nobody and pauses until you decide.
-</Warning>
+<Note>
+  Scheduled sync and automatic offboarding are not available at the moment. You fetch current directory data with **Sync now**, and a person always decides on deactivation.
+</Note>
 
 ## Conflicts
 
