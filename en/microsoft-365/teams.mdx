@@ -22,7 +22,7 @@ With the Tivero app in Microsoft Teams, approvers get requests in a private chat
     A Teams administrator uploads the package in Teams Admin Center: **Teams apps → Manage apps → Upload new app**.
   </Step>
   <Step title="Turn on notifications">
-    Turn on **Teams notifications**. Tivero installs the app for the people who need it. Microsoft may take a moment — notifications start arriving on their own.
+    Turn on **Teams notifications**. Tivero installs the app for each person when it has their first notification to deliver (details in the section below). Microsoft may take a moment — notifications start arriving on their own.
   </Step>
   <Step title="Check it works">
     Click **Send a test notification**.
@@ -31,6 +31,71 @@ With the Tivero app in Microsoft Teams, approvers get requests in a private chat
 
 <Note>
   The Tivero app isn't available in the Microsoft Teams store. Your organization's catalog holds a copy of the package as it was when you published it — a newer version doesn't arrive on its own. If the **Current version** in Tivero differs from the one in Teams Admin Center, upload it again through **Manage apps → Tivero → Update**.
+</Note>
+
+## Do employees need to install Tivero in Teams themselves?
+
+No. Once your administrators have set up Teams, Tivero installs the app for a person when it has their first notification to deliver. Neither an administrator nor the employee has to install it by hand for each person.
+
+It isn't an install for everyone at once. Connecting Microsoft 365 or turning on notifications doesn't install Tivero for all your employees — the app appears only for the people who get a notification.
+
+### Who does what
+
+| Step | Who | When |
+|---|---|---|
+| Granting administrator consent | Microsoft 365 administrator | once |
+| Publishing the app in the organization's app catalog | Teams administrator | once, and again for each new package version |
+| Making the app available to users under your organization's Teams app policies | Teams administrator | as your organization's policy requires |
+| Turning on **Teams notifications** | an Administrator or the Owner in Tivero | once |
+| Installing the app for a specific person | Tivero, automatically | at that person's first notification |
+
+Tivero installs only its own app, only in your organization and only from your organization's app catalog. It doesn't bypass your Teams app policies — if your organization's policies don't allow Tivero for someone, the app may not appear for them.
+
+### What happens at the first notification
+
+<Steps>
+  <Step title="An employee submits a request">
+    The request reaches Tivero as usual.
+  </Step>
+  <Step title="Tivero works out the recipient">
+    Your approval setup in Tivero decides who it is — for example, the employee's supervisor.
+  </Step>
+  <Step title="Tivero installs the app if needed">
+    If the recipient doesn't have the Tivero app yet, Tivero installs it for them through Microsoft Teams.
+  </Step>
+  <Step title="The recipient sees Tivero in Teams">
+    The Tivero app and a private chat with Tivero appear in the recipient's Teams.
+  </Step>
+  <Step title="The recipient gets the card">
+    A request card arrives in the chat. The recipient can open **Details** or — if they may approve this request — decide with **Approve** or **Decline**.
+  </Step>
+</Steps>
+
+### Who gets the app
+
+The app is installed for every person Tivero sends a Teams notification to:
+
+- approvers — when a request is waiting for their decision, including at a later approval step or after the request was handed over to someone else;
+- employees — when their request is approved or declined;
+- an administrator who clicks **Send a test notification**.
+
+For a person to get a Teams notification:
+
+- your organization has a connected Microsoft 365 integration, granted administrator consent for Teams and turned on **Teams notifications**;
+- the person is [synced from the directory](/en/microsoft-365/directory-sync) of the connected Microsoft 365 organization;
+- the person has an active Microsoft 365 account and a Microsoft Teams licence;
+- the Tivero app is published in your organization's app catalog and available to that person under your Teams app policies.
+
+To decide from a card, the person also needs an active Tivero account and permission to approve that request — the same as in the Tivero app. The **My absences** and **Team** tabs additionally need the one-time setup described in "Tivero tabs in Teams" below.
+
+### What the recipient sees
+
+- **The Tivero app and a private chat.** If Teams is open, the app usually appears right away. Sometimes Teams has to be restarted before it shows.
+- **A welcome message** after the install, briefly explaining what Tivero sends in this chat.
+- **The request card.** The welcome and the card can arrive in either order.
+
+<Note>
+  The welcome is in the language the person uses in Teams — at install time that's the only language Tivero knows. Request cards are in the language set for that person in Tivero. If the two differ, the welcome and the cards can be in different languages.
 </Note>
 
 ## Notifications and approvals in chat
@@ -55,6 +120,10 @@ Before employees open the tabs, an administrator in your organization has to app
 ## People without notifications
 
 If Tivero shows **Some people cannot receive notifications**, check that these people have a Microsoft Teams licence and an active account in your organization.
+
+<Warning>
+  If someone uninstalls Tivero in Teams by hand, Tivero may not install the app for them again, and their Teams notifications may stop arriving. Ask that person to add Tivero in Teams again. If that doesn't help, write to us at hello@tivero.app. Don't disconnect the Microsoft 365 integration for this — disconnecting affects your whole organization. Notifications that didn't arrive aren't sent again; the requests wait in Tivero and can be decided there.
+</Warning>
 
 ## Turn off notifications
 
