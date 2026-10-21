@@ -22,7 +22,7 @@ Z aplikacją Tivero w Microsoft Teams osoby zatwierdzające dostają wnioski na 
     Administrator Teams wgrywa pakiet w Teams Admin Center: **Aplikacje Teams → Zarządzaj aplikacjami → Prześlij nową aplikację**.
   </Step>
   <Step title="Włącz powiadomienia">
-    Włącz przełącznik **Powiadomienia Teams**. Tivero zainstaluje aplikację dla osób, które jej potrzebują. Microsoft może potrzebować chwili — powiadomienia zaczną docierać same.
+    Włącz przełącznik **Powiadomienia Teams**. Tivero zainstaluje aplikację u każdej osoby w chwili, gdy będzie miało dla niej pierwsze powiadomienie (szczegóły w sekcji niżej). Microsoft może potrzebować chwili — powiadomienia zaczną docierać same.
   </Step>
   <Step title="Sprawdź działanie">
     Kliknij **Wyślij powiadomienie testowe**.
@@ -31,6 +31,71 @@ Z aplikacją Tivero w Microsoft Teams osoby zatwierdzające dostają wnioski na 
 
 <Note>
   Aplikacja Tivero nie jest dostępna w sklepie Microsoft Teams. Katalog Twojej organizacji przechowuje kopię pakietu z chwili publikacji — nowsza wersja nie trafia tam sama. Gdy **Aktualna wersja** w Tivero różni się od tej w Teams Admin Center, wgraj pakiet ponownie przez **Zarządzaj aplikacjami → Tivero → Aktualizuj**.
+</Note>
+
+## Czy pracownicy muszą samodzielnie instalować Tivero w Teams?
+
+Nie. Gdy administratorzy skonfigurują Teams, Tivero samo instaluje aplikację u osoby, do której ma wysłać pierwsze powiadomienie. Ani administrator, ani pracownik nie musi instalować jej ręcznie dla każdej osoby.
+
+To nie jest instalacja u wszystkich naraz. Samo połączenie Microsoft 365 ani włączenie powiadomień nie instaluje Tivero u wszystkich pracowników — aplikacja pojawia się tylko u osób, które dostają powiadomienie.
+
+### Kto co robi
+
+| Krok | Kto | Kiedy |
+|---|---|---|
+| Udzielenie zgody administratora | administrator Microsoft 365 | raz |
+| Publikacja aplikacji w katalogu aplikacji organizacji | administrator Teams | raz i przy każdej nowej wersji pakietu |
+| Udostępnienie aplikacji użytkownikom zgodnie z zasadami aplikacji Teams w organizacji | administrator Teams | zgodnie z polityką organizacji |
+| Włączenie **Powiadomienia Teams** | Administrator lub Właściciel w Tivero | raz |
+| Instalacja aplikacji u konkretnej osoby | Tivero, automatycznie | przy pierwszym powiadomieniu dla tej osoby |
+
+Tivero instaluje wyłącznie własną aplikację, tylko w Twojej organizacji i tylko z jej katalogu aplikacji. Nie omija zasad aplikacji Teams — jeśli zasady Twojej organizacji nie dopuszczają Tivero dla danej osoby, aplikacja może się u niej nie pojawić.
+
+### Co dzieje się przy pierwszym powiadomieniu
+
+<Steps>
+  <Step title="Pracownik składa wniosek">
+    Wniosek trafia do Tivero jak zwykle.
+  </Step>
+  <Step title="Tivero ustala odbiorcę">
+    Odbiorcę wyznacza konfiguracja akceptacji w Tivero — na przykład przełożony pracownika.
+  </Step>
+  <Step title="Tivero instaluje aplikację, jeśli trzeba">
+    Jeśli odbiorca nie ma jeszcze aplikacji Tivero, Tivero instaluje ją u niego przez Microsoft Teams.
+  </Step>
+  <Step title="Odbiorca widzi Tivero w Teams">
+    W Teams odbiorcy pojawia się aplikacja Tivero i prywatny czat z Tivero.
+  </Step>
+  <Step title="Odbiorca dostaje kartę">
+    Na czacie pojawia się karta wniosku. Odbiorca może otworzyć **Szczegóły** albo — jeśli ma uprawnienia do akceptacji tego wniosku — zdecydować przyciskiem **Akceptuj** lub **Odrzuć**.
+  </Step>
+</Steps>
+
+### Kto dostaje aplikację
+
+Aplikacja instaluje się u każdej osoby, do której Tivero wysyła powiadomienie w Teams:
+
+- u osób akceptujących — gdy wniosek czeka na ich decyzję, także w kolejnym etapie akceptacji albo po przekazaniu wniosku innej osobie;
+- u pracowników — gdy ich wniosek zostanie zaakceptowany lub odrzucony;
+- u administratora, który kliknie **Wyślij powiadomienie testowe**.
+
+Aby dana osoba mogła dostać powiadomienie w Teams:
+
+- organizacja ma połączoną integrację Microsoft 365, udzieloną zgodę administratora dla Teams i włączone **Powiadomienia Teams**;
+- osoba jest [zsynchronizowana z katalogu](/pl/microsoft-365/directory-sync) połączonej organizacji Microsoft 365;
+- osoba ma aktywne konto Microsoft 365 i licencję Microsoft Teams;
+- aplikacja Tivero jest opublikowana w katalogu aplikacji organizacji i dostępna dla tej osoby zgodnie z zasadami aplikacji Teams.
+
+Do decyzji z karty osoba potrzebuje też aktywnego konta w Tivero i uprawnienia do akceptacji tego wniosku — tak samo jak w aplikacji Tivero. Zakładki **Moje** i **Zespół** wymagają dodatkowo jednorazowej konfiguracji opisanej w sekcji „Zakładki Tivero w Teams” poniżej.
+
+### Co widzi odbiorca
+
+- **Aplikację Tivero i prywatny czat.** Jeśli Teams jest otwarty, aplikacja zwykle pojawia się od razu. Czasem trzeba ponownie uruchomić Teams, żeby ją zobaczyć.
+- **Wiadomość powitalną** po instalacji, z krótkim opisem tego, co Tivero wysyła na tym czacie.
+- **Kartę wniosku.** Powitanie i karta mogą pojawić się w dowolnej kolejności.
+
+<Note>
+  Powitanie jest w języku, którego osoba używa w Teams — przy instalacji Tivero zna tylko ten język. Karty wniosków są w języku ustawionym dla tej osoby w Tivero. Jeśli te języki się różnią, powitanie i karty mogą być w różnych językach.
 </Note>
 
 ## Powiadomienia i akceptacje na czacie
@@ -55,6 +120,10 @@ Zanim pracownicy otworzą zakładki, administrator Twojej organizacji musi raz z
 ## Osoby bez powiadomień
 
 Jeśli Tivero pokazuje **Część osób nie może otrzymywać powiadomień**, sprawdź, czy te osoby mają licencję Microsoft Teams i aktywne konto w Twojej organizacji.
+
+<Warning>
+  Jeśli ktoś ręcznie odinstaluje Tivero w Teams, Tivero może nie zainstalować aplikacji u tej osoby ponownie, a jej powiadomienia w Teams mogą przestać docierać. Poproś tę osobę, aby dodała Tivero w Teams ponownie. Jeśli to nie pomoże, napisz do nas na hello@tivero.app. Nie odłączaj w tym celu integracji Microsoft 365 — odłączenie dotyczy całej organizacji. Powiadomienia, które nie dotarły, nie są wysyłane ponownie; wnioski czekają w Tivero i można je rozpatrzyć w aplikacji.
+</Warning>
 
 ## Wyłącz powiadomienia
 
