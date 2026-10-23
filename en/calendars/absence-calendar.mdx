@@ -35,11 +35,8 @@ You can add absences to Google Calendar, Outlook or Apple Calendar as a read-onl
   <Step title="Open the subscription">
     In the **Calendar**, click **Subscribe (iCal)**.
   </Step>
-  <Step title="Choose the scope">
-    Choose **My calendar**, **Team calendar** (Manager and above) or **Whole organization** (HR and above).
-  </Step>
   <Step title="Create the link">
-    Click **Create my link** or **Create organization link** and copy the link.
+    Click **Create my link** (your own absences) or **Create organization link** (the whole organization — HR, Administrator and Owner only) and copy the link.
   </Step>
   <Step title="Add the link in your calendar app">
     In your calendar app, add a calendar from a URL (subscription) and paste the link.
@@ -53,6 +50,21 @@ You can add absences to Google Calendar, Outlook or Apple Calendar as a read-onl
 <Warning>
   Treat the link like a password — anyone who has it sees absences in the chosen scope. If the link leaks, revoke it and create a new one.
 </Warning>
+
+### When a link stops working
+
+A link works on behalf of the person who created it, and only while that person still has access to its scope. Tivero checks this every time the calendar refreshes. The link stops showing absences when:
+
+- the person who created it is deactivated or removed from the organization;
+- their role is lowered so that they no longer have access to the link's scope (for example an organization link after a change from HR to Member);
+- the organization is suspended;
+- the link is revoked.
+
+If access is restored, the link starts working again. When a link stops working or is revoked, the calendar app no longer receives updates. Entries it downloaded earlier may stay in the app, depending on the app. To remove them, delete the subscription in your calendar app.
+
+<Note>
+  If your subscription has stopped refreshing, create a new link and replace it in your calendar app.
+</Note>
 
 ## Related articles
 
