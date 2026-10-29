@@ -18,7 +18,7 @@ https://tivero.app). Built with Mintlify; configuration lives in `docs.json`.
 
 ## Product ↔ Help Center synchronization
 
-The app (`lchempion/tivero`) is the source of truth; this site describes it.
+The app (`tivero-app/tivero`) is the source of truth; this site describes it.
 
 - When a docs change describes UI labels, routes/navigation, workflows,
   permissions, configuration, screenshots or troubleshooting, verify it against
