@@ -17,6 +17,71 @@ Click a person on the **People** list to open their page. There you find:
 | **Work schedule** | An individual work week. See [Work schedules](/en/calendars/work-schedules). |
 | **Approval routing** | Who approves this person's requests: the organization settings, the team settings or people named individually. |
 
+## Individual dimension
+
+An individual dimension is a person's own limit for a chosen absence type. From the date you choose, it applies instead of the policy's limit.
+
+The dimension states what the person is entitled to, but it doesn't change their balance. Requests are settled against the [balance](/en/time-off/balances), which you set in the **Balance** section.
+
+<Steps>
+  <Step title="Open the person">
+    Click the person on the **People** list.
+  </Step>
+  <Step title="Set the dimension">
+    On the **Absences** tab, in **Individual settings**, click **Add setting** (or **Manage** if the person already has individual settings). In the **Individual dimension** dialog, choose the **Absence type**, enter the **Limit** or select **No limit (B2B)**, and set **Effective from**.
+  </Step>
+  <Step title="Save">
+    Click **Save**.
+  </Step>
+</Steps>
+
+### A limit of 0 and "No limit"
+
+- Entering **0** sets the dimension to zero. It doesn't remove days the person already has in their balance. For a type that reduces the balance, the person can't submit a request until you set their balance.
+- **No limit (B2B)** means there is no limit.
+- An empty field isn't saved. Tivero asks for a valid limit. A limit can have at most two decimal places.
+
+### Changing the dimension from a date
+
+A new dimension replaces the current one from its **Effective from** date. The previous period isn't removed: it ends the day before. The person page shows the dimension in force and any scheduled dimensions.
+
+Example: a person has 20 days from 1 January 2026. You save 26 days from 1 July 2026. From 1 January to 30 June, 20 days apply. From 1 July, 26 days apply.
+
+Changing the dimension doesn't change the person's balance. Saving the same dimension with the same date again changes nothing.
+
+### Dimension history
+
+Periods that have already ended sit below the dimensions in force, in a collapsed **Dimension history (count)**
+section. Click it to expand. Each row shows the absence type, the limit, the **From** and **Effective to** dates and one
+of these labels:
+
+- **Continued**: another dimension of the same type applies from the next day, for example after a change from a date or after a new period was added by hand.
+- **Ended**: the period simply ended and nothing took over straight away.
+
+Notes from ended periods aren't shown here. The list holds at most the 20 most recent periods. When there are more, a
+line under the list says how many of how many are shown. The count in the heading always covers every ended period.
+
+### When Tivero refuses to save
+
+Tivero doesn't guess which period should apply. The save is refused and the current settings stay unchanged when:
+
+- another dimension of this type already starts on the same day,
+- a dimension of this type is scheduled from a later date,
+- the dimension in force has its own end date,
+- the person has several dimensions of this type in force at the same time.
+
+Check the person's individual dimensions on their page and choose a date that doesn't conflict with an existing period.
+
+### When several dimensions cover the same period
+
+Older settings can contain several dimensions of the same type in force at once. The person page then shows a **Needs review** warning:
+
+- **Applied for now**: the dimension Tivero is using at the moment, based on its precedence rule. This doesn't mean the value is correct.
+- **To review**: the other dimensions covering that period.
+- **Scheduled · to review**: a dimension that will overlap another one once it starts.
+
+Tivero doesn't correct anything by itself or suggest the right limit. Check the values and dates before making further changes.
+
 ## Deactivate a person
 
 Deactivate someone who is leaving the organization or should no longer have access.
