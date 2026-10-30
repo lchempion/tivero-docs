@@ -21,6 +21,8 @@ Click a person on the **People** list to open their page. There you find:
 
 An individual dimension is a person's own limit for a chosen absence type. From the date you choose, it applies instead of the policy's limit.
 
+The dimension states what the person is entitled to, but it doesn't change their balance. Requests are settled against the [balance](/en/time-off/balances), which you set in the **Balance** section.
+
 <Steps>
   <Step title="Open the person">
     Click the person on the **People** list.
@@ -35,17 +37,17 @@ An individual dimension is a person's own limit for a chosen absence type. From 
 
 ### A limit of 0 and "No limit"
 
-- Entering **0** sets a zero limit: the person has no days to use for this type.
+- Entering **0** sets the dimension to zero. It doesn't remove days the person already has in their balance. For a type that reduces the balance, the person can't submit a request until you set their balance.
 - **No limit (B2B)** means there is no limit.
 - An empty field isn't saved. Tivero asks for a valid limit. A limit can have at most two decimal places.
 
 ### Changing the dimension from a date
 
-A new dimension replaces the current one from its **Effective from** date. The previous period isn't removed: it ends the day before and stays in the history.
+A new dimension replaces the current one from its **Effective from** date. The previous period isn't removed: it ends the day before. The person page shows the dimension in force and any scheduled dimensions.
 
 Example: a person has 20 days from 1 January 2026. You save 26 days from 1 July 2026. From 1 January to 30 June, 20 days apply. From 1 July, 26 days apply.
 
-Saving the same dimension with the same date again changes nothing.
+Changing the dimension doesn't change the person's balance. Saving the same dimension with the same date again changes nothing.
 
 ### When Tivero refuses to save
 
@@ -56,7 +58,7 @@ Tivero doesn't guess which period should apply. The save is refused and the curr
 - the dimension in force has its own end date,
 - the person has several dimensions of this type in force at the same time.
 
-Check the person's dimensions and choose a different start date.
+Check the person's individual dimensions on their page and choose a date that doesn't conflict with an existing period.
 
 ## Deactivate a person
 
