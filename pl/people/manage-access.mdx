@@ -17,6 +17,47 @@ Kliknij osobę na liście **Osoby**, aby otworzyć jej stronę. Znajdziesz tam:
 | **Grafik pracy** | Indywidualny tydzień pracy. Zobacz [Grafiki pracy](/pl/calendars/work-schedules). |
 | **Sposób akceptacji** | Kto akceptuje wnioski tej osoby: ustawienia organizacji, zespołu albo osoby wskazane indywidualnie. |
 
+## Indywidualny wymiar
+
+Indywidualny wymiar to własny limit osoby dla wybranego typu nieobecności. Obowiązuje zamiast limitu z zasady od wskazanej daty.
+
+<Steps>
+  <Step title="Otwórz osobę">
+    Kliknij osobę na liście **Osoby**.
+  </Step>
+  <Step title="Ustaw wymiar">
+    W sekcji **Indywidualne ustawienia** kliknij **Indywidualny wymiar**. Wybierz **Typ nieobecności**, wpisz **Limit** albo zaznacz **Bez limitu (B2B)** i podaj datę w polu **Obowiązuje od**.
+  </Step>
+  <Step title="Zapisz">
+    Kliknij **Zapisz**.
+  </Step>
+</Steps>
+
+### Limit 0 a „Bez limitu”
+
+- Wpisane **0** oznacza zerowy limit: osoba nie ma dni do wykorzystania w tym typie.
+- **Bez limitu (B2B)** oznacza brak limitu.
+- Puste pole nie jest zapisywane. Tivero poprosi o poprawny limit. Limit może mieć najwyżej dwa miejsca po przecinku.
+
+### Zmiana wymiaru od wybranej daty
+
+Nowy wymiar zastępuje dotychczasowy od daty w polu **Obowiązuje od**. Poprzedni okres nie znika: kończy się dzień wcześniej i zostaje w historii.
+
+Przykład: osoba ma 20 dni od 1 stycznia 2026. Zapisujesz 26 dni od 1 lipca 2026. Od 1 stycznia do 30 czerwca obowiązuje 20 dni, a od 1 lipca 26 dni.
+
+Ponowny zapis tego samego wymiaru z tą samą datą niczego nie zmienia.
+
+### Kiedy Tivero odmówi zapisu
+
+Tivero nie zgaduje, który okres ma obowiązywać. Zapis zostanie odrzucony, a dotychczasowe ustawienia pozostaną bez zmian, gdy:
+
+- od tego samego dnia obowiązuje już inny wymiar tego typu,
+- dla tego typu jest zaplanowany wymiar od późniejszej daty,
+- obowiązujący wymiar ma własną datę końcową,
+- osoba ma kilka wymiarów tego typu obowiązujących jednocześnie.
+
+Sprawdź wtedy wymiary tej osoby i wybierz inną datę rozpoczęcia.
+
 ## Dezaktywuj osobę
 
 Dezaktywuj osobę, która odchodzi z organizacji albo nie powinna już mieć dostępu.
